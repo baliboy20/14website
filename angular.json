@@ -129,5 +129,10 @@
       }
     }
   },
-  "defaultProject": "zz14"
+  "defaultProject": "zz14",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

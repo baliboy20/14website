@@ -1,23 +1,120 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-Hi to the Campers
-good goood
+
+<mat-toolbar>
+    <mat-toolbar-row>
+        <div class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'none'}">
+            <img src="../assets/14logo.jpg" alt="">
+
+        </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-button>MENU</button>
+        <button mat-button>BOOK</button>
+        <button mat-button>CORPORATE EVENTS</button>
+        <button mat-button>AFTERNOON TEA</button>
+        <button mat-button>Find Us</button>
+        <button mat-button>Book</button>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+<div class="main_container">
+    <div class="vid-container" [ngStyle]="{'display': flag ? 'flex' : 'none'}" >
+        <video src="../assets/videos/food_journey.mp4"
+                controls
+               #player></video>
+    </div>
+
+    <!-- BANNER-->
+    <div class= "banner">
+        <img src="../assets/ext_drinks/IMG_0331_v3.jpg" alt="">
+        <!--<div> A CAFE FOR ALL SEASONS</div>-->
+    </div>
+
+    <!--OPENING TIMES-->
+    <div class="openingTimes">
+
+        <mat-card>
+            <mat-card-title>WEEKDAYS</mat-card-title>
+            <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>WEEKENDS</mat-card-title>
+            <mat-card-content>From 10:00am to 5:00pm</mat-card-content>
+        </mat-card>
+
+
+    </div>
+    <div class="menus">
+
+
+
+               <mat-card>
+                   <mat-card-title>BRUNCH AND BREAKFAST</mat-card-title>
+                   <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi autem dicta eius expedita harum impedit inventore maiores modi molestiae officiis provident quaerat quasi quos, suscipit unde veritatis vero voluptates!</mat-card-content>
+               </mat-card>
+
+               <mat-card>
+                   <mat-card-title>LUNCH/ SUPPER</mat-card-title>
+                   <mat-card-content>lorem</mat-card-content>
+               </mat-card>
+
+               <mat-card>
+                   <mat-card-title>LUNCH/ SUPPER</mat-card-title>
+                   <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores assumenda atque commodi consequuntur eaque earum eius eos, labore non numquam sed sunt tempora. Accusantium aliquid ipsam laudantium provident voluptatibus.</mat-card-content>
+               </mat-card>
+         
+
+
+    </div>
+
+
+      
+<!-- CORPORATE EVENTS-->
+        <mat-card>
+            <mat-card-title>
+                CORPORATE EVENTS
+            </mat-card-title>
+            <mat-card-title>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur enim expedita ipsa ipsam repellat voluptates? Aspernatur blanditiis, commodi doloremque exercitationem expedita fugiat, iusto, molestias officia recusandae ullam veniam voluptate.
+            </mat-card-title>
+        </mat-card>
+
+
+  <mat-card class="findUs">
+      <mat-card-title>Find us</mat-card-title>
+      <mat-card-content>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.562206704581!2d-0.10153198422950949!3d51.521247379637416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56b6b9b0e5%3A0x7e75f98d07c065dc!2s14+Charterhouse+Square%2C+London+EC1M+6AX!5e0!3m2!1sen!2suk!4v1539252448386" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </mat-card-content>
+  </mat-card>
+
+
+
+    <!-- AFTERNOON TEAS-->
+
+<mat-card>
+    <mat-card-title> AFTERNOON TEAS</mat-card-title>
+    <mat-card-content>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis in ipsa iste magni obcaecati optio,
+            repudiandae tenetur. Accusantium atque cumque cupiditate expedita libero obcaecati optio repudiandae saepe
+            sunt temporibus?
+        </div>
+        <div>Consequuntur cum dolores ipsum, mollitia natus repellat unde. Est fuga natus nesciunt recusandae? Excepturi
+            pariatur, sunt. Assumenda error quaerat totam. Ad dolore id iste labore quisquam repudiandae sint sunt
+            voluptate.
+        </div>
+        <div>Ab ad animi autem cumque, debitis deserunt doloribus ducimus eaque est eveniet facilis illum impedit
+            inventore, ipsa ipsam modi molestias, natus nihil nobis odio perferendis possimus quo ratione rem
+            voluptatem.
+        </div>
+    </mat-card-content>
+    <mat-card-content>
+        <img src="../assets/IMG_0181.jpg" alt="">
+    </mat-card-content>
+</mat-card>
+
+
 
