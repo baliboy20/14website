@@ -6,10 +6,13 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit  {
-showvid =false;
+showvid = true;
     flag = false;
     @ViewChild('player') player: ElementRef;
-    ngOnInit() {
+
+  scrollup = (ev) => console.log(ev);
+  ngOnInit() {
+     window.addEventListener('scroll',this.scrollup)
        this.flag = true;
         const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
         player.load();

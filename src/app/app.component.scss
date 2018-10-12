@@ -14,9 +14,9 @@ mat-toolbar {
   display: flex;
   position: fixed;
   top: 0px;
-  background-color: transparentize(white, .3);
+  background-color: transparentize(white, .05);
   & button {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 .logo-row {
@@ -28,18 +28,16 @@ mat-toolbar {
   padding-left: 2%;
   //color: darken(darkgray,20%);
   font-family: arial;
-  font-size: 16px;
-
-  line-height:22px;
+  font-size: 12px;
+  line-height:12px;
   justify-content: space-between;
-
   & img {
     transform: scale(.6);
   }
 }
-
 .menu-row {
   padding-top: 65px;
+  padding-bottom: 40px;
   //color: darken(limegreen, 19%);
 
   & button {
@@ -49,20 +47,12 @@ mat-toolbar {
     margin-left: auto;
   }
 }
-
-.right-lean {
-
-  font-family: Roboto;
-}
-
 .main_container {
   display: flex;
   background-color: whitesmoke;
   flex-flow: column;
   margin-top: 205px;
-
 }
-
 .vid-container {
   display: flex;
   z-index: 100;
@@ -119,9 +109,14 @@ mat-toolbar {
   align-content: space-around;
   justify-content: space-around;
   & mat-card {
-    width: 20%;
-    & mat-card-content {
+    width: 30%;
+    & mat-card-title {
+      text-align: center;
       font-size: 15px;
+    }
+    & mat-card-content {
+      text-align: center;
+      font-size: 12px;
     }
   }
   margin-bottom: 20px;
