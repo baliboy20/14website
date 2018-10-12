@@ -6,17 +6,18 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit  {
-
+showvid =false;
     flag = false;
     @ViewChild('player') player: ElementRef;
     ngOnInit() {
-       // this.flag = true;
+       this.flag = true;
         const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
         player.load();
-        console.log('ng onit play video');
         player.playbackRate = 10;
         player.onended = () => this.flag = false;
-       // player.play();
+      if (this.showvid) {
+          player.play();
+      }
     }
     // @HostListener('onload', ['$event.target'])
     load(event) {
