@@ -62,7 +62,21 @@ mat-toolbar {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: transparentize(darkgray, .1);
+  background-color: transparentize(black, .2);
+}
+.video_frame {
+  margin-top: 20px;
+  display: inline-flex;
+  white: red solid 5px;
+  border-radius: 8px;
+  flex-flow: 0 0 auto;
+  flex-direction: column;
+
+  & button {
+    color: white;
+    align-self: flex-end;
+  }
+
 }
 
 .imagebox {
@@ -78,21 +92,21 @@ mat-toolbar {
   background-image: url("../assets/IMG_0190.jpg");
   min-height: 300px;
 }
-.banner:before {
-  z-index: 2;
-  display: block;
-  position: relative;
-  text-align: center;
-  top: 200px;
-  background-color: transparent;
-  color: white;
-  content: "A Cafe for all Seasons";
-  font-family: Chalkduster;
-  font-size: 40px;
-  text-shadow: 0px 2px 2px darken(whitesmoke, 25%);
-  width: 100%;
-  height: 100%;
-}
+//.banner:before {
+//  z-index: 2;
+//  display: block;
+//  position: relative;
+//  text-align: center;
+//  top: 220px;
+//  background-color: transparent;
+//  color: white;
+//  content: "A Cafe for all Seasons";
+//  font-family: Chalkduster;
+//  font-size: 55px;
+//  text-shadow: 0px 2px 2px darken(whitesmoke, 25%);
+//  width: 100%;
+//  height: 100%;
+//}
 
 .banner {
   & img {
@@ -104,7 +118,7 @@ mat-toolbar {
 .openingTimes {
   padding-top: 20px;
   display: flex;
-  flex: 1 1 100%;
+  flex: 1 1 30%;
   flex-flow: row wrap;
   align-content: space-around;
   justify-content: space-around;
@@ -120,25 +134,37 @@ mat-toolbar {
     }
   }
   margin-bottom: 20px;
-  padding-right: 30%;
-  padding-left: 30%;
+  //padding-right: 30%;
+  //padding-left: 30%;
 }
 
 .menus {
-   justify-content: space-around;
+   justify-content: flex-start;
   display: flex;
-  flex: 0 0 50%;
-  flex-flow: row ;
+  flex: 1 1 30%;
+  flex-flow: row wrap ;
+  margin-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 3%;
   mat-card {
     display: flex;
-    flex: 0 0 28%;
+    flex: 0 0 25%;
     flex-flow: row wrap;
+    margin-right: 2%;
+    & mat-card-title {
+      font-family: Chalkduster;
+    }
     & mat-card-content {
 
 
       font-size: 15px;
       justify-content: center;
     }
+  }
+
+  & > :nth-child(1) {
+
+    //left-margin:130px;
   }
 }
 

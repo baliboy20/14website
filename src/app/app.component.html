@@ -2,117 +2,144 @@
 
 
 <mat-toolbar>
-  <mat-toolbar-row class="logo-row">
+    <mat-toolbar-row class="logo-row">
 
-    <div class="right-lean">
-      <span>No.14 Charterhouse Square,</span>
-      <span>London EC1M 6AN,</span> <br>
-      <br>
-      <span class="material-icons" style="font-size: 14px">local_phone</span> <span> 0203 817 4178</span>
-      <div style="display: inline-block; width: 15px"></div>
-      <span class="material-icons" style="font-size: 14px">     email</span> <span> 14.green.main@gmail.com</span>
-    </div>
-    <span class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'block'}">
+        <div class="right-lean">
+            <span>No.14 Charterhouse Square,</span>
+            <span>London EC1M 6AN,</span> <br>
+            <br>
+            <span class="material-icons" style="font-size: 14px">local_phone</span> <span> 0203 817 4178</span>
+            <div style="display: inline-block; width: 15px"></div>
+            <span class="material-icons" style="font-size: 14px">     email</span> <span> 14.green.main@gmail.com</span>
+        </div>
+        <span class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'block'}">
             <img src="../assets/14logo.jpg" alt="">
         </span>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="menu-row">
-    <button mat-button>MENU</button>
-    <button mat-button>BOOK</button>
-    <button mat-button>PRIVATE EVENTS</button>
-    <button mat-button>AFTERNOON TEA</button>
-    <button mat-button>FIND US</button>
-    <button mat-raised-button color="accent">RESERVERVATIONS</button>
-  </mat-toolbar-row>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="menu-row">
+        <button mat-button>MENU</button>
+        <button mat-button>BOOK</button>
+        <button mat-button>PRIVATE EVENTS</button>
+        <button mat-button>AFTERNOON TEA</button>
+        <button mat-button>FIND US</button>
+        <button mat-raised-button color="accent">RESERVERVATIONS</button>
+    </mat-toolbar-row>
 
 </mat-toolbar>
 
 
 <div class="main_container">
-  <div class="vid-container" [ngStyle]="{'display': flag       ? 'flex' : 'none'}">
-    <video src="../assets/videos/food_journey.mp4"
-           controls
-           #player></video>
-  </div>
 
-  <!-- BANNER-->
-  <div class="banner">
-    <img src="../assets/ext_drinks/IMG_0331_v3.jpg" alt="">
-    <!--<div> A CAFE FOR ALL SEASONS</div>-->
-  </div>
+    <div class="vid-container" [ngStyle]="{'display': flag || showVid ? 'flex' : 'none'}">
+        <div class="video_frame">
+            <button mat-icon-button (click)="closeVidWindow()">
+                <span class="material-icons" style="font-size: 34px">close</span>
+            </button>
+            <video src="../assets/videos/food_journey.mp4"
+                   controls
+                   #player>
+            </video>
+        </div>
+    </div>
 
-  <!--OPENING TIMES-->
-  <div class="openingTimes">
+    <!-- BANNER-->
+    <div class="banner">
+        <img src="../assets/BannerWithStrapLine.jpg" alt="">
+    </div>
 
+    <!--OPENING TIMES-->
+    <div class="openingTimes">
+
+        <mat-card>
+            <mat-card-title>MON - FRI</mat-card-title>
+            <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>SAT - SUN</mat-card-title>
+            <mat-card-content>From 10:00am to 5:00pm</mat-card-content>
+        </mat-card>
+
+
+    </div>
+    <div class="menus">
+        <mat-card>
+            <mat-card-title>Brunch & Breakfast</mat-card-title>
+            <mat-card-content>
+
+                Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
+                Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked Salmon.
+                <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
+                    <i class="material-icons">
+                        cloud_download
+                    </i> </a>
+                <img src="../assets/food/P1000255.jpg"
+                     style="width: 95%"
+                     alt="">
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card>
+            <mat-card-title>
+                Afternoon Tea
+            </mat-card-title>
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <img src="../assets/food/sconesByCh.jpeg"
+                     style="width: 95%"
+                     alt="">
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-title>Lunchtime & Evening</mat-card-title>
+
+
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum, deserunt eaque earum
+                enim eveniet ipsam laborum, minima mollitia natus nesciunt numquam odit perferendis possimus provident,
+                quia recusandae. Odio!
+                <a href="../assets/menus/Menu%2005-30-18.pdf">
+                    see menu
+                    <i class="material-icons">
+                        cloud_download
+                    </i> </a>
+                <img src="../assets/food/P1000338.jpg"
+                     style="width: 95%"
+                     alt="">
+
+            </mat-card-content>
+        </mat-card>
+
+
+    </div>
+
+
+    <!-- CORPORATE EVENTS-->
     <mat-card>
-      <mat-card-title>MON - FRI</mat-card-title>
-      <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
+        <mat-card-title>
+            PRIVATE HIRE AND EVENTS
+        </mat-card-title>
+        <mat-card-title>
+            Dining Areas are available for private functions and dinners. The rooms
+            are suitable for receptions parties and private dining. Weather permitting parties and receptions can be
+            orga in
+            our extensive outside areas.
+        </mat-card-title>
     </mat-card>
 
-    <mat-card>
-      <mat-card-title>SAT - SUN</mat-card-title>
-      <mat-card-content>From 10:00am to 5:00pm</mat-card-content>
+
+    <mat-card class="findUs">
+        <mat-card-title>Find us</mat-card-title>
+        <mat-card-content>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
+                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </mat-card-content>
     </mat-card>
 
 
-  </div>
-  <div class="menus">
-
-
-    <mat-card>
-      <mat-card-title>BRUNCH & BREAKFAST</mat-card-title>
-      <mat-card-content>
-        Breakfast is served each day from 7:30am with a special Brunch Menu for weekends. An offering of Freshly
-        Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked Salmon.
-        <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
-          <i class="material-icons">
-            cloud_download
-          </i> </a>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>LUNCH & SUPPER</mat-card-title>
-
-      <a href="../assets/menus/Menu%2005-30-18.pdf">
-        <i class="material-icons">
-          cloud_download
-        </i> </a>
-      <mat-card-content>
-
-        <i class="material_icons">cloud_download</i>
-
-      </mat-card-content>
-    </mat-card>
-
-
-  </div>
-
-
-  <!-- CORPORATE EVENTS-->
-  <mat-card>
-    <mat-card-title>
-      CORPORATE EVENTS
-    </mat-card-title>
-    <mat-card-title>
-      Dining Areas are available for Hire for Corporate and Private functions. The rooms
-      can be arranged for Receptions paties and priveat Dining Functions. In Clement weather parties and Receptions can be orga in
-      our extensive outside areas.
-    </mat-card-title>
-  </mat-card>
-
-
-  <mat-card class="findUs">
-    <mat-card-title>Find us</mat-card-title>
-    <mat-card-content>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </mat-card-content>
-  </mat-card>
-
-
-  <!-- AFTERNOON TEAS-->
+    <!-- AFTERNOON TEAS-->
 
 
 
