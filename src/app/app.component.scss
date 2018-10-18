@@ -1,45 +1,62 @@
 
 
-mat-toolbar {
-  padding-top: 60px;
-  & mat-toolbar-row {
+.mat-toolbar {
+  padding-top: 20px;
+  & .mat-toolbar-row {
     display: flex;
+    flex: 1 1 100%;
     flex-flow: row wrap;
   }
 
   padding-left: 0;
   padding-right: 0;
   margin: 0;
-  z-index: 11;
+  z-index: 110;
   display: flex;
+  flex: 1 1 100%;
+  flex-flow: row wrap;
   position: fixed;
   top: 0px;
-  background-color: transparentize(white, .05);
+  //background-color: transparentize(white, .05);
+  background-color: purple;
   & button {
     font-size: 18px;
   }
 }
+.mat-toolbar-row {
+
+}
 .logo-row {
-  min-height: 70px;
+  //min-height: 70px;
   display: flex;
   flex: 1 1 auto;
   flex-flow: row;
-  padding-right: 48%;
-  padding-left: 2%;
+  //padding-right: 48%;
+  //padding-left: 2%;
+  background-color: brown;
   //color: darken(darkgray,20%);
   font-family: arial;
-  font-size: 12px;
-  line-height:12px;
-  justify-content: space-between;
+  //font-size: 12px;
+  //line-height:12px;
+  justify-content: center;
   & img {
-    transform: scale(.6);
+    //transform: scale(.4);
+    width: 80px;
+    height: 100px;
   }
+}
+.contact-details-row {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row;
+  font-size: 12px;
+  background-color: orange;
 }
 .menu-row {
   padding-top: 65px;
   padding-bottom: 40px;
   //color: darken(limegreen, 19%);
-
+  background-color: lightblue;
   & button {
     font-family: arial;
   }
@@ -67,7 +84,7 @@ mat-toolbar {
 .video_frame {
   margin-top: 20px;
   display: inline-flex;
-  white: red solid 5px;
+  //white: red solid 5px;
   border-radius: 8px;
   flex-flow: 0 0 auto;
   flex-direction: column;
@@ -170,4 +187,25 @@ mat-toolbar {
 
 .location {
 
+}
+
+@media only screen and (max-width: 600px) {
+  mat-toolbar {
+    z-index: 0;
+    position: relative;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    background-color: red;
+    align-items: flex-start;
+    padding-top:0px;
+  }
+  .logo-row {
+    background-color: lightblue;
+    flex: 1 1 100%;
+    justify-content: center;
+    & img {
+
+      transform: scale(.3);
+    }
+  }
 }
