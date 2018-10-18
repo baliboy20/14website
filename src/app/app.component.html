@@ -4,7 +4,7 @@
 <mat-toolbar>
     <mat-toolbar-row class="logo-row">
 
-        <div class="right-lean">
+        <div class="right-lean" style="order:2; margin-left: auto">
             <span>No.14 Charterhouse Square,</span>
             <span>London EC1M 6AN,</span> <br> dhflskhjfjl
             <br>
@@ -12,9 +12,9 @@
             <div style="display: inline-block; width: 15px"></div>
             <span class="material-icons" style="font-size: 14px">     email</span> <span> 14.green.main@gmail.com</span>
         </div>
-        <span class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'block'}">
-            <img src="../assets/14logo.jpg" alt="">
-        </span>
+        <div class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'block'}">
+            <img src="../assets/logo_small.png" alt="">
+        </div>
     </mat-toolbar-row>
     <mat-toolbar-row class="menu-row">
         <button mat-button>MENU</button>
