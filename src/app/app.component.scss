@@ -1,20 +1,23 @@
 
 mat-toolbar {
+
   padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  //z-index: 0;           //** undo
+  display: flex;
+  position: fixed;
+  top: 0px;
+  background-color: transparentize(white, .05);
+  flex-flow: row wrap;
   & mat-toolbar-row {
     display: flex;
     flex-flow: row wrap;
     //background-color:red;
   }
 
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-  z-index: 11;
-  display: flex;
-  position: fixed;
-  top: 0px;
-  background-color: transparentize(white, .05);
+
   & button {
     font-size: 18px;
   }
@@ -25,6 +28,7 @@ mat-toolbar {
   display: flex;
   flex: 1 1 auto;
   flex-flow: row;
+  background-color: limegreen;
   //padding-right: 48%;
   //padding-left: 2%;
   //color: darken(darkgray,20%);
@@ -45,9 +49,11 @@ mat-toolbar {
 }
 
 .menu-row {
-  padding-top: 65px;
-  padding-bottom: 40px;
+  display: flex;
+  //padding-top: 65px;
+  //padding-bottom: 40px;
   //color: darken(limegreen, 19%);
+  background-color: lightcyan;
   & button {
     font-family: arial;
   }
@@ -65,7 +71,7 @@ mat-toolbar {
 
 .vid-container {
   display: flex;
-  z-index: 100;
+ // z-index: 100;               //** undo
   justify-content: center;
   flex-flow: row nowrap;
   position: fixed;
@@ -80,7 +86,7 @@ mat-toolbar {
   display: inline-flex;
   white: red solid 5px;
   border-radius: 8px;
-  flex-flow: 0 0 auto;
+  flex: 0 0 auto;
   flex-direction: column;
 
   & button {
@@ -131,12 +137,14 @@ mat-toolbar {
 .openingTimes {
   padding-top: 20px;
   display: flex;
-  flex: 1 1 30%;
+  flex: 1 1 45%;
+
   flex-flow: row wrap;
-  align-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
+
   & mat-card {
-    width: 30%;
+    margin-right: 5%;
+
     & mat-card-title {
       text-align: center;
       font-size: 15px;
