@@ -1,31 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<mat-toolbar>
-    <mat-toolbar-row class="logo-row">
+<div class="wp-toolbar mat-elevation-z24">
+    <div class="toolbar-firstrow">
 
-        <div class="right-lean" style="order:2; margin-left: auto">
-            <span>No.14 Charterhouse Square,</span>
+        <div class="contact-info" style="order:2">
+            <div class="inner"><span>No.14 Charterhouse Square,</span>
             <span>London EC1M 6AN,</span> <br>
             <br>
-            <span class="material-icons" style="font-size: 14px">local_phone</span> <span> 0203 817 4178</span>
+            <span class="material-icons" style="font-size: 16px">local_phone</span> <span> 0203 817 4178</span>
             <div style="display: inline-block; width: 15px"></div>
-            <span class="material-icons" style="font-size: 14px">     email</span> <span> 14.green.main@gmail.com</span>
-        </div>
-        <div class="intro" [ngStyle]="{'display': !flag ? 'flex' : 'block'}">
+            <span class="material-icons" style="font-size: 16px">     email</span> <span> 14.green.main@gmail.com</span>
+        </div></div>
+        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
             <img src="../assets/logo_small.png" alt="">
         </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row class="menu-row">
-        <button mat-button>MENU</button>
+    </div>
+    <div class="toolbar-secondrow">
+        <button mat-button>MENUS</button>
         <button mat-button>BOOK</button>
         <button mat-button>PRIVATE EVENTS</button>
         <button mat-button>AFTERNOON TEA</button>
         <button mat-button>FIND US</button>
         <button mat-raised-button color="accent">RESERVERVATIONS</button>
-    </mat-toolbar-row>
+    </div>
 
-</mat-toolbar>
+</div>
 
 
 <div class="main_container">

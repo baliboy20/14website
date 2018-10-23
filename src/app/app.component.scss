@@ -1,59 +1,71 @@
 
-mat-toolbar {
+.wp-toolbar {
 
   padding-top: 40px;
   padding-left: 0;
   padding-right: 0;
   margin: 0;
-  //z-index: 0;           //** undo
+  z-index: 10;
   display: flex;
   position: fixed;
   top: 0px;
+  //background-color: papayawhip;
   background-color: transparentize(white, .05);
+  //background-color: transparentize(white, .05);
+  //border: red solid 1px;
+  flex: 1 0 100%;
+  width: 100%;
   flex-flow: row wrap;
-  & mat-toolbar-row {
-    display: flex;
-    flex-flow: row wrap;
-    //background-color:red;
-  }
 
-
-  & button {
-    font-size: 18px;
-  }
 }
 
-.logo-row {
+.toolbar-firstrow {
   min-height: 70px;
   display: flex;
-  flex: 1 1 auto;
-  flex-flow: row;
-  background-color: limegreen;
-  //padding-right: 48%;
-  //padding-left: 2%;
-  //color: darken(darkgray,20%);
+  flex: 1 0  100%;
+  flex-flow: row wrap;
   font-family: arial;
   font-size: 12px;
   line-height: 12px;
   justify-content: center;
-  & .intro {
+  & .logo {
     align-self: center;
-    width: auto;
+    flex: 1 1 50%;
     background-color: transparentize(white, .05);
-    width: 54%;
+    //width: 54%;
     & img {
       margin-left : auto;
     }
 
   }
+  & .contact-info {
+    display: flex;
+    //background-color: blue;
+    justify-content: flex-end;
+
+     & .inner {
+       //border: purple  1px solid;
+       padding-right: 30px;
+       //background-color: red;
+     }
+    flex-flow: row wrap;
+    text-align: right;
+
+    flex: 1 1 50%;
+    margin-top:20px;
+
+
+  }
 }
 
-.menu-row {
+.toolbar-secondrow {
   display: flex;
+  flex: 1 1  100%;
+  flex-flow: row wrap;
   //padding-top: 65px;
   //padding-bottom: 40px;
   //color: darken(limegreen, 19%);
-  background-color: lightcyan;
+  //background-color: lightcyan;
   & button {
     font-family: arial;
   }
@@ -172,6 +184,7 @@ mat-toolbar {
     flex: 0 0 25%;
     flex-flow: row wrap;
     margin-right: 2%;
+    margin-bottom: 10px;
     & mat-card-title {
       font-family: Chalkduster;
     }
@@ -179,6 +192,7 @@ mat-toolbar {
 
       font-size: 15px;
       justify-content: center;
+
     }
   }
 
@@ -188,6 +202,102 @@ mat-toolbar {
   }
 }
 
-.location {
+@media only screen and (max-width:800px) {
+  .toolbar-firstrow {
+    //min-height: 70px;
+    display: flex;
+
+    flex: 1 0  100%;
+    flex-flow: row wrap;
+    font-family: arial;
+    font-size: 12px;
+    line-height: 12px;
+    justify-content: space-around;
+    & .logo {
+      justify-content: center;
+      flex: 1 1 100%;
+      background-color: blue;
+      background-color: transparentize(white, .05);
+
+      //width: 54%;
+      & img {
+        //display: none;
+        margin-left : 1px;
+        border: red 1px solid;
+
+      }
+
+    }
+    & .contact-info {
+      display: flex;
+      //background-color: blue;
+      justify-content: center;
+
+      & .inner {
+        //border: purple  1px solid;
+        padding-right: 30px;
+        //background-color: red;
+      }
+
+      //text-align: right;
+      //
+      //flex: 1 1 50%;
+      margin-top:20px;
+
+
+    }
+  }
+
+
+
+  .wp-toolbar {
+
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    top: 0px;
+    //background-color: papayawhip;
+    background-color: transparentize(white, .05);
+    //background-color: transparentize(white, .05);
+    //border: red solid 1px;
+    flex: 1 0 100%;
+    width: 100%;
+    flex-flow: row wrap;
+
+  }
+
+  .toolbar-secondrow {
+    display: flex;
+    flex: 1 1  100%;
+    flex-flow: row wrap;
+    //padding-top: 65px;
+    //padding-bottom: 40px;
+    //color: darken(limegreen, 19%);
+    //background-color: lightcyan;
+    & button {
+      font-family: arial;
+      flex:  1 1 100%;
+      background-color: gray;
+      border-top: darken(gray, 5%) 1px solid;
+    }
+    & button:nth-child(6) {
+      margin-left: auto;
+    }
+  }
+
+
+  .menus {
+    flex: 1 1 100%;
+    mat-card{
+      //background-color: red;
+      flex: 1 1 100%;
+    }
+  }
+
 
 }
+
