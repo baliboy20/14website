@@ -1,4 +1,8 @@
+$green-gold : #827031;
 
+@mixin title-color {
+  color: $green-gold;
+}
 .wp-toolbar {
   padding-top: 40px;
   padding-left: 0;
@@ -8,6 +12,7 @@
   display: flex;
   position: fixed;
   top: 0px;
+  @include title-color;
   background-color: transparentize(white, .05);
   flex: 1 0 100%;
   width: 100%;
@@ -24,15 +29,22 @@
   font-size: 12px;
   line-height: 12px;
   justify-content: center;
+
   & .logo {
     align-self: center;
     flex: 1 1 50%;
     background-color: transparentize(white, .05);
     & img {
+      z-index: 2;
       margin-left : auto;
+      padding: 12px 18px 12px 18px;
+      border: $green-gold 2px solid;
+      box-shadow: 1px 2px 2px 1px $green-gold;
+      border-radius: 60%;
     }
   }
   & .contact-info {
+    background-color: transparentize(white, .05);
     display: flex;
     justify-content: flex-end;
      & .inner {
@@ -45,14 +57,20 @@
   }
 }
 .toolbar-secondrow {
+  background-color: transparentize(white, .05);
   display: flex;
   flex: 1 1  100%;
   flex-flow: row wrap;
   & button {
     font-family: arial;
   }
-  & button:nth-child(6) {
+  & a {
     margin-left: auto;
+    margin-right: 12px;
+    z-index: 22;
+    transform: translateY(20px);
+    //& > div {
+    //}
   }
 }
 .main_container {
@@ -63,7 +81,7 @@
 }
 .vid-container {
   display: flex;
- // z-index: 100;               //** undo
+  z-index: 100;               //** undo
   justify-content: center;
   flex-flow: row nowrap;
   position: fixed;
@@ -102,6 +120,7 @@
   width: 100%;
 }
 .openingTimes {
+
   padding-top: 20px;
   display: flex;
   flex: 1 1 45%;
@@ -110,6 +129,7 @@
   & mat-card {
     margin-right: 5%;
     & mat-card-title {
+      @include title-color;
       text-align: center;
       font-size: 15px;
     }
@@ -130,12 +150,14 @@
   padding-left: 5%;
   padding-right: 3%;
   mat-card {
+
     display: flex;
     flex: 0 0 25%;
     flex-flow: row wrap;
     margin-right: 2%;
     margin-bottom: 10px;
     & mat-card-title {
+      @include title-color;
       font-family: Chalkduster;
     }
     & mat-card-content {
@@ -161,6 +183,7 @@
     font-size: 12px;
     line-height: 12px;
     justify-content: space-around;
+    margin-bottom: 15px;
     & .logo {
       justify-content: center;
       flex: 1 1 100%;
@@ -169,7 +192,6 @@
       & img {
         //display: none;
         margin-left : 1px;
-        border: red 1px solid;
       }
     }
     & .contact-info {
@@ -177,8 +199,11 @@
       justify-content: center;
       & .inner {
         padding-right: 30px;
+
       }
+
       margin-top:20px;
+
     }
   }
   .wp-toolbar {
@@ -201,12 +226,43 @@
     & button {
       font-family: arial;
       flex:  1 1 100%;
-      background-color: gray;
+      background-color: whitesmoke;
       border-top: darken(gray, 5%) 1px solid;
     }
     & button:nth-child(6) {
       margin-left: auto;
     }
+  }
+
+.main_container {
+ //margin-top:10px;
+  background-color: blue;
+}
+  .vid-container {
+    //display: flex;
+    //z-index: 100;               //** undo
+    //justify-content: center;
+    //flex-flow: row nowrap;
+    //position: fixed;
+    //top: 0;
+    width: 320px;
+    height: 250px;
+   //height: 560px;
+    background-color: transparentize(black, .2);
+  }
+  .video_frame {
+    margin-top: 20px;
+    display: inline-flex;
+    white: red solid 5px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    flex-direction: row;
+
+    & button {
+      color: white;
+      align-self: flex-end;
+    }
+
   }
   .menus {
     flex: 1 1 100%;

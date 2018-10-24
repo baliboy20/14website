@@ -1,4 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {MatCard} from '@angular/material';
 
 @Component({
     selector: 'app-root',
@@ -7,23 +8,30 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 })
 export class AppComponent implements OnInit {
     showvid = true;
-    flag = false;
+    showFirstRow = true;
+    flag = true;
+    lastScrollPos = 0;
     @ViewChild('player') player: ElementRef;
 
     scrollup = (ev) => console.log(ev);
 
+    ngAfterInit() {
+        console.log("william");
+    }
     ngOnInit() {
         window.addEventListener('scroll', this.scrollup);
         this.flag = true;
-        const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
-        player.load();
+        window.setTimeout(() => {
+            const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
+            player.load();
 
-        player.playbackRate = 1;
-        player.onended = () => this.flag = false;
-        if (this.showvid) {
-            player.currentTime = 41;
-            player.play();
-        }
+            player.playbackRate = 1;
+            player.onended = () => this.flag = false;
+            if (this.showvid) {
+                player.currentTime = 1;
+                player.play();
+            }
+        }, 500);
     }
 
     load(event) {
@@ -49,6 +57,13 @@ export class AppComponent implements OnInit {
         player.currentTime = 0;
         this.showvid = false;
         this.flag = false;
-        console.log('hello');
+        console.log('hello' + this.flag);
+    }
+
+    scrollToElement(ele) {
+        console.log(ele)
+        const html: HTMLHtmlElement = ele as HTMLHtmlElement;
+        console.log(html);
+        html.scrollIntoView(true);
     }
 }

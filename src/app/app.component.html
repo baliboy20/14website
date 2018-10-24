@@ -1,38 +1,48 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<div class="wp-toolbar mat-elevation-z24">
-    <div class="toolbar-firstrow">
+<div class="wp-toolbar mat-elevation-z10" >
+    <div class="toolbar-firstrow" *ngIf="showFirstRow">
 
         <div class="contact-info" style="order:2">
             <div class="inner">
-                <span class="material-icons" style="font-size: 20px; transform: translateY(3px);">home</span>
-                <span>14 Charterhouse Square,</span>
-            <span>London EC1M 6AN</span> <br>
+                <span class="material-icons" style="font-size: 20px; transform: translate(-9px, 3px);">home</span>
+                <span>14 CHARTERHOUSE SQ,</span>
+            <span>LONDON EC1M 6AN</span> <br>
             <br>
-            <span class="material-icons" style="font-size: 20px; transform: translateY(3px);">local_phone</span> <span> 0203 817 4178</span>
+            <span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span> <span> 0203 817 4178</span>
             <div style="display: inline-block; width: 15px"></div>
             <span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span> <span> 14.green.main@gmail.com</span>
         </div></div>
-        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
+        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}" >
             <img src="../assets/logo_small.png" alt="">
+
         </div>
     </div>
     <div class="toolbar-secondrow">
-        <button mat-button>MENUS</button>
+        <button mat-button (click)="scrollToElement(menus)">MENUS</button>
         <button mat-button>BOOK</button>
-        <button mat-button>PRIVATE EVENTS</button>
-        <button mat-button>AFTERNOON TEA</button>
-        <button mat-button>FIND US</button>
-        <button mat-raised-button color="accent">RESERVERVATIONS</button>
+        <button mat-button>PRIVATE EVENTS/ RECEPTIONS</button>
+        <button mat-button>AFTERNOON TEAS</button>
+        <button mat-button (click)="scrollToElement(findus)">FIND US</button>
+
+        <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;" (click)="showFirstRow = !showFirstRow">
+
+            <span style="display: inline-block; color: linen; transform: translateY(-6px)">XMAS BOOK NOW
+             <img src="../assets/bells.png" alt="" style="transform: scale(1) translateY(-20px) translateX(20px) rotateZ(30deg)">
+            </span></a>
+
+
+
+
     </div>
 
 </div>
 
-
+<!---->
 <div class="main_container">
 
-    <div class="vid-container" [ngStyle]="{'display': flag || showvid ? 'flex' : 'none'}">
+    <div class="vid-container" *ngIf="flag === true">
         <div class="video_frame">
             <button mat-icon-button (click)="closeVidWindow()">
                 <span class="material-icons" style="font-size: 34px">close</span>
@@ -64,8 +74,9 @@
 
 
     </div>
-    <div class="menus">
-        <mat-card>
+    <div class="menus" >
+        <mat-card> <span #menus></span>
+            <div class="mat-elevation-z1" style="width: 100%; border-top: #d8368e 3px solid;  height: 0px;"></div>
             <mat-card-title>Brunch & Breakfast</mat-card-title>
             <mat-card-content>
 
@@ -75,13 +86,14 @@
                     <i class="material-icons">
                         cloud_download
                     </i> </a>
-                <img src="../assets/food/P1000255.jpg"
+                <img src="../assets/food/brunch_top.png"
                      style="width: 95%"
                      alt="">
             </mat-card-content>
         </mat-card>
 
         <mat-card>
+            <div  class="mat-elevation-z1" style="width: 100%; height: 0px; border-top: #fcbc2b 3px solid"></div>
             <mat-card-title>
                 Afternoon Tea
             </mat-card-title>
@@ -94,9 +106,8 @@
         </mat-card>
 
         <mat-card>
-            <mat-card-title>Lunchtime & Evening</mat-card-title>
-
-
+            <div  class="mat-elevation-z1" style="width: 100%; border-top: #a7b81a 3px solid;  height: 0px; margin-bottom: 10px"></div>
+            <mat-card-title>Lunchtime & Eveningtime</mat-card-title>
             <mat-card-content>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum, deserunt eaque earum
                 enim eveniet ipsam laborum, minima mollitia natus nesciunt numquam odit perferendis possimus provident,
@@ -113,6 +124,44 @@
             </mat-card-content>
         </mat-card>
 
+        <mat-card>
+            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <mat-card-title>
+                Christmas Dinner
+            </mat-card-title>
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <img src="../assets/xmas-lunch.jpg"
+                     style="width: 95%"
+                     alt="">
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <mat-card-title>
+                Bar * Casual Dining
+            </mat-card-title>
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <img src="../assets/ext_drinks/IMG_0280.jpg"
+                     style="width: 95%"
+                     alt="">
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <mat-card-title>
+               Super-Fine Coffees
+            </mat-card-title>
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <img src="../assets/ext_drinks/IMG_0280.jpg"
+                     style="width: 95%"
+                     alt="">
+            </mat-card-content>
+        </mat-card>
 
     </div>
 
@@ -131,7 +180,8 @@
     </mat-card>
 
 
-    <mat-card class="findUs">
+    <mat-card class="findUs" >
+        <span #findus></span>
         <mat-card-title>Find us</mat-card-title>
         <mat-card-content>
             <iframe
