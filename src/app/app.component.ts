@@ -1,5 +1,11 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {MatCard} from '@angular/material';
+import {fromEvent, Observable} from 'rxjs/index';
+import {throttleTime} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {debounceTime} from "rxjs/internal/operators";
+// import 'rxjs/add/operator/debounceTime';
+
 
 @Component({
     selector: 'app-root',
@@ -10,17 +16,30 @@ export class AppComponent implements OnInit {
     showvid = true;
     showFirstRow = true;
     flag = true;
-    lastScrollPos = 0;
+   private lastScrollPos = '0';
+  private  scrollPos = 9;
     @ViewChild('player') player: ElementRef;
 
-    scrollup = (ev) => console.log(ev);
+    getScrollPos(ev) {
+      let sc =  window.pageYOffset;
+      this.lastScrollPos = this.scrollPos;
+      this.scrollPos = sc;
+      console.log('scrollY', this.scrollPos, this.lastScrollPos);
+    }
 
     ngAfterInit() {
-        console.log("william");
     }
     ngOnInit() {
-        window.addEventListener('scroll', this.scrollup);
-        this.flag = true;
+      this.lastScrollPos = 5678;
+        // window.addEventListener('scroll', this.getScrollPos);
+      const obs = fromEvent(window, 'scroll');
+      obs.pipe(map(a => a), debounceTime(1))
+        // .map(a => a)
+        // .debounceTime(5)
+        // .map(this.getScrollPos)
+        .subscribe(this.getScrollPos)
+
+      this.flag = true;
         window.setTimeout(() => {
             const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
             player.load();
@@ -29,7 +48,7 @@ export class AppComponent implements OnInit {
             player.onended = () => this.flag = false;
             if (this.showvid) {
                 player.currentTime = 1;
-                player.play();
+              //  player.play();
             }
         }, 500);
     }
@@ -63,7 +82,7 @@ export class AppComponent implements OnInit {
     scrollToElement(ele) {
         console.log(ele)
         const html: HTMLHtmlElement = ele as HTMLHtmlElement;
-        console.log(html);
+        // console.log(html);
         html.scrollIntoView(true);
     }
 }

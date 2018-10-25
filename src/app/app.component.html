@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
 <div class="wp-toolbar mat-elevation-z10" >
     <div class="toolbar-firstrow" *ngIf="showFirstRow">
+      <!---->
 
         <div class="contact-info" style="order:2">
             <div class="inner">
@@ -32,27 +32,28 @@
              <img src="../assets/bells.png" alt="" style="transform: scale(1) translateY(-20px) translateX(20px) rotateZ(30deg)">
             </span></a>
 
-
-
-
     </div>
 
 </div>
 
+<div class="vid-veil" *ngIf="flag === true">
+  <button mat-icon-button (click)="closeVidWindow()">
+    <span class="material-icons" style="font-size: 34px">close</span>
+  </button>
+  <div class="video_frame">
+
+    <video src="../assets/videos/food_journey.mp4"
+           controls
+           #player>
+    </video>
+  </div>
+</div>
+
+
 <!---->
 <div class="main_container">
 
-    <div class="vid-container" *ngIf="flag === true">
-        <div class="video_frame">
-            <button mat-icon-button (click)="closeVidWindow()">
-                <span class="material-icons" style="font-size: 34px">close</span>
-            </button>
-            <video src="../assets/videos/food_journey.mp4"
-                   controls
-                   #player>
-            </video>
-        </div>
-    </div>
+
 
     <!-- BANNER-->
     <div class="banner">
