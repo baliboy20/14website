@@ -36,6 +36,20 @@
 
 </div>
 
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+
 <div class="vid-veil" *ngIf="flag === true">
   <button mat-icon-button (click)="closeVidWindow()">
     <span class="material-icons" style="font-size: 34px">close</span>
