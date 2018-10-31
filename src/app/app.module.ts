@@ -12,7 +12,7 @@ import {MaterialsModule} from './materials/materials.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-      MaterialsModule,
+    MaterialsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
