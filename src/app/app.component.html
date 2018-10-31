@@ -1,38 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<div class="wp-toolbar mat-elevation-z10" >
+<div class="wp-toolbar mat-elevation-z10">
     <div class="toolbar-firstrow" *ngIf="showFirstRow">
 
-        <div class="contact-info" style="order:2">
+        <div class="contact-info" style="order:2;">
             <div class="inner">
-                <span class="material-icons" style="font-size: 20px; transform: translate(-9px, 3px);">home</span>
-                <span>14 CHARTERHOUSE SQ,</span>
-            <span>LONDON EC1M 6AN</span> <br>
-            <br>
-            <span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span> <span> 0203 817 4178</span>
-            <div style="display: inline-block; width: 15px"></div>
-            <span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span> <span> 14.green.main@gmail.com</span>
-        </div></div>
-        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}" >
+                <span class="material-icons icons" style="font-size: 20px; transform: translate(-9px, 3px);">home</span>
+                <span>14 Charterhouse Sq.,
+                 London EC1M 6AX</span> <br>
+
+                <span class="material-icons icons"
+                      style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>
+                <span> 0203 817 4178</span>
+                <div style="display: inline-block; width: 15px"></div>
+
+                <span class="material-icons icons" style="font-size: 20px; transform: translateY(3px);">email</span>
+                <span> 14.green.bookings@gmail.com</span>
+            </div>
+        </div>
+        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
             <img src="../assets/logo_small.png" alt="">
 
         </div>
     </div>
     <div class="toolbar-secondrow">
         <button mat-button (click)="scrollToElement(menus)">MENUS</button>
-        <button mat-button>BOOK</button>
-        <button mat-button>PRIVATE EVENTS/ RECEPTIONS</button>
+        <button mat-button>RESERVE</button>
+        <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
         <button mat-button>AFTERNOON TEAS</button>
         <button mat-button (click)="scrollToElement(findus)">FIND US</button>
 
-        <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;" (click)="showFirstRow = !showFirstRow">
+        <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;"
+           (click)="showFirstRow = !showFirstRow">
 
             <span style="display: inline-block; color: linen; transform: translateY(-6px)">XMAS BOOK NOW
-             <img src="../assets/bells.png" alt="" style="transform: scale(1) translateY(-20px) translateX(20px) rotateZ(30deg)">
+             <img src="../assets/bells.png" alt=""
+                  style="transform: scale(1) translateY(-20px) translateX(20px) rotateZ(30deg)">
             </span></a>
-
-
 
 
     </div>
@@ -63,7 +68,7 @@
     <div class="openingTimes">
 
         <mat-card>
-            <mat-card-title>MON - FRI</mat-card-title>
+            <mat-card-title>Mon - Fri</mat-card-title>
             <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
         </mat-card>
 
@@ -74,18 +79,24 @@
 
 
     </div>
-    <div class="menus" >
-        <mat-card> <span #menus></span>
-            <div class="mat-elevation-z1" style="width: 100%; border-top: #d8368e 3px solid;  height: 0px;"></div>
-            <mat-card-title>Brunch & Breakfast</mat-card-title>
+    <div class="menus">
+        <mat-card #menus>
+            <div class="mat-elevation-z1 separator pink"></div>
+            <mat-card-title>
+                <div style="display:inline-block">Brunch & Breakfast</div>
+                <a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
+                    <span style="font-size: 13px">Menu</span>
+                    <span class="material-icons">
+                        cloud_download
+                    </span> </a>
+            </mat-card-title>
             <mat-card-content>
 
-                Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
-                Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked Salmon.
-                <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
-                    <i class="material-icons">
-                        cloud_download
-                    </i> </a>
+                <p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
+                    Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked
+                    Salmon.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
                 <img src="../assets/food/brunch_top.png"
                      style="width: 95%"
                      alt="">
@@ -93,12 +104,23 @@
         </mat-card>
 
         <mat-card>
-            <div  class="mat-elevation-z1" style="width: 100%; height: 0px; border-top: #fcbc2b 3px solid"></div>
+            <div class="mat-elevation-z1 separator yellow"></div>
             <mat-card-title>
                 Afternoon Tea
             </mat-card-title>
             <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <p>Afternoon Tea in The Crystal Moon Lounge at Corinthia Hotel offers one of life's great luxuries.
+                    Illuminated by a spectacular Baccarat Chandelier and accompanied by uplifting melodies from a
+                    Steinway Piano, the Crystal Moon Lounge offers an idyllic atmosphere for a newly launched sumptuous
+                    Afternoon Tea.
+                </p>
+                <p>Designed to showcase individual elements of a tea ceremony and with every aspect of a guests'
+                    experience considered, their expert Tea Master weighs and infuses bespoke tea blends for the perfect
+                    cup of tea. Delight in this wonderful interactive experience, with cakes and indulgent patisseries
+                    served from our heritage trolley on a bespoke line of Richard Brendon bone china. For a touch of
+                    elegance, enjoy a glass of Laurent-Perrier Brut Champagne in Baccarat Mille Nuits champagne flutes
+                    with a nod to the breath-taking Baccarat crystal chandelier overhead.</p>
+
                 <img src="../assets/food/sconesByCh.jpeg"
                      style="width: 95%"
                      alt="">
@@ -106,12 +128,19 @@
         </mat-card>
 
         <mat-card>
-            <div  class="mat-elevation-z1" style="width: 100%; border-top: #a7b81a 3px solid;  height: 0px; margin-bottom: 10px"></div>
-            <mat-card-title>Lunchtime & Eveningtime</mat-card-title>
+            <div class="mat-elevation-z1 separator green"></div>
+            <mat-card-title>Lunch & Evening</mat-card-title>
             <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam cum, deserunt eaque earum
-                enim eveniet ipsam laborum, minima mollitia natus nesciunt numquam odit perferendis possimus provident,
-                quia recusandae. Odio!
+                <p>Locally sourced, seasonal ingredients are used whenever possible and daily specials showcase the
+                    chefs’ imaginative flair. The modern Hudson’s menu features dishes like grilled sea bass with a
+                    light salad, and grilled corn-fed chicken breast with deep-fried mashed potato.</p>
+                For dessert try Hudson’s Mess, the restaurant’s own take on a classic Eton Mess, or the daily-changing
+                cheese board for something more savoury. The contemporary food menu is matched by an exciting array of
+                cocktails, fine wines, house-brewed lagers and real ales.
+
+                <p>Husdon's House in Soho fuses 1930’s glamour with a modern finish with a central bar, private booths,
+                    ornate sofas and candlelit tables. Tottenham Court Road Tube Station is just 2 minutes’ walk
+                    away.</p>
                 <a href="../assets/menus/Menu%2005-30-18.pdf">
                     see menu
                     <i class="material-icons">
@@ -124,26 +153,35 @@
             </mat-card-content>
         </mat-card>
 
+        <!--CHRISTMAS DINNER-->
         <mat-card>
-            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <div class="mat-elevation-z1 separator green"></div>
             <mat-card-title>
-                Christmas Dinner
+                Christmas Dinner / News Years Dinner
             </mat-card-title>
             <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+
+                <p>Toast to Christmas in London with a glass of champagne and tasty canapes. With a three-course Christmas
+                    dinner, with dishes such as roast turkey with all the trimmings and a helping of traditional
+                    Christmas pudding.
+                </p>
                 <img src="../assets/xmas-lunch.jpg"
                      style="width: 95%"
                      alt="">
             </mat-card-content>
         </mat-card>
 
+        <!--BAR and Casaual Dining-->
+
         <mat-card>
-            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <div class="mat-elevation-z1 separator pink"></div>
             <mat-card-title>
-                Bar * Casual Dining
+                Bar and Snack Dining
             </mat-card-title>
             <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
+                cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                <br><br><br>
                 <img src="../assets/ext_drinks/IMG_0280.jpg"
                      style="width: 95%"
                      alt="">
@@ -151,12 +189,13 @@
         </mat-card>
 
         <mat-card>
-            <div class="mat-elevation-z1" style="height=0; width: 100%; border-top: #693a9c 3px solid"></div>
+            <div class="mat-elevation-z1 separator yellow"></div>
             <mat-card-title>
-               Super-Fine Coffees
+                Super-Fine Coffees
             </mat-card-title>
             <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
+                cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
                 <img src="../assets/ext_drinks/IMG_0280.jpg"
                      style="width: 95%"
                      alt="">
@@ -167,22 +206,56 @@
 
 
     <!-- CORPORATE EVENTS-->
-    <mat-card>
-        <mat-card-title>
-            PRIVATE HIRE AND EVENTS
-        </mat-card-title>
-        <mat-card-title>
-            Dining Areas are available for private functions and dinners. The rooms
-            are suitable for receptions parties and private dining. Weather permitting parties and receptions can be
-            orga in
-            our extensive outside areas.
-        </mat-card-title>
-    </mat-card>
+    <div class="private-hire" #privateEvents>
+        <mat-card>
+            <mat-card-title>
+                PRIVATE HIRE AND EVENTS
+            </mat-card-title>
+            <mat-card-content>
+                <p>Leaving parties, team celebrations and friends’ get togethers often end up with around this number of
+                    guests. It’s a great size –small enough to still feel intimate but big enough not to have to worry
+                    about
+                    awkward silences.</p>
+                <p>Small team meetings, brainstormings, high level discussions, board dinners and power lunches are top
+                    of
+                    this category for corporate events, while private do’s are much more varied ranging from birthday
+                    parties, celebrations, high end hen and stag dinners and family lunches.</p>
+            </mat-card-content>
+        </mat-card>
 
+    </div>
 
-    <mat-card class="findUs" >
+    <mat-card class="findUs" #findus>
         <span #findus></span>
-        <mat-card-title>Find us</mat-card-title>
+        <mat-card-title>GETTING HERE</mat-card-title>
+        <mat-card-content>
+            <p>
+                Located in Chartehouse Sq, immediately next door to the Charterhouse Museum.
+
+                <br>
+
+                <span class="material-icons" style="font-size: 20px;">home</span>
+                <span>14 CHARTERHOUSE SQ,</span>
+                <span>LONDON EC1M 6AX</span>
+                <br>
+                <br>
+                <!--<span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
+                <!--<span> 0203 817 4178</span>-->
+                <!--<br>-->
+                <!--<span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span>-->
+                <!--<span> 14.green.main@gmail.com</span>-->
+
+
+                <b>DIRECTIONS</b>
+                <br>
+                <span class="material-icons" style="font-size: 20px;">train</span>
+                <span> Farrindon Station, Thameslink, Crossrail, </span>
+                <br>
+                <span class="material-icons" style="font-size: 20px;">subway</span>
+                <span> Farrindon Station, Thameslink, Crossrail, </span>
+
+            </p>
+        </mat-card-content>
         <mat-card-content>
             <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"

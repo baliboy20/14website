@@ -1,8 +1,29 @@
-$green-gold : #827031;
+$green-gold: #827031;
 
 @mixin title-color {
+  color: red;
   color: $green-gold;
+  font-family: SansSerif;
+  font-size: 20px;
+  letter-spacing: .06em;
+  //-webkit-text-stroke: 1px $green-gold;
+
 }
+
+@mixin main-font {
+  //font-family: "Bellerose";
+  font-family: "Helvetica Neue";
+  //color: red;
+  //line-height: 17px;
+  font-size: 14px;
+
+  letter-spacing: .04em;
+  font-weight: 300;
+  -webkit-text-stroke: .04em dimgray;
+  paint-order: stroke fill;
+  color: darken(chocolate, 20%);
+}
+
 .wp-toolbar {
   padding-top: 40px;
   padding-left: 0;
@@ -12,7 +33,7 @@ $green-gold : #827031;
   display: flex;
   position: fixed;
   top: 0px;
-  @include title-color;
+
   background-color: transparentize(white, .05);
   flex: 1 0 100%;
   width: 100%;
@@ -23,10 +44,10 @@ $green-gold : #827031;
 .toolbar-firstrow {
   min-height: 70px;
   display: flex;
-  flex: 1 0  100%;
+  flex: 1 0 100%;
   flex-flow: row wrap;
-  font-family: arial;
-  font-size: 12px;
+  @include main-font;
+  //font-size: 12px;
   line-height: 12px;
   justify-content: center;
 
@@ -36,7 +57,7 @@ $green-gold : #827031;
     background-color: transparentize(white, .05);
     & img {
       z-index: 2;
-      margin-left : auto;
+      margin-left: auto;
       padding: 12px 18px 12px 18px;
       border: $green-gold 2px solid;
       box-shadow: 1px 2px 2px 1px $green-gold;
@@ -44,44 +65,52 @@ $green-gold : #827031;
     }
   }
   & .contact-info {
+    //background-color: palegreen;
     background-color: transparentize(white, .05);
     display: flex;
     justify-content: flex-end;
-     & .inner {
-       padding-right: 30px;
-     }
-    flex-flow: row wrap;
-    text-align: right;
+    //flex-flow: row wrap;
+    text-align: left;
     flex: 1 1 50%;
-    margin-top:20px;
+    //margin-top: 20px;
+    & .inner {
+      @include main-font;
+      padding-right: 30px;
+      line-height: 20px;
+      & .icons {
+        color: $green-gold;
+      }
+    }
   }
 }
+
 .toolbar-secondrow {
   background-color: transparentize(white, .05);
   display: flex;
-  flex: 1 1  100%;
+  flex: 1 1 100%;
   flex-flow: row wrap;
   & button {
-    font-family: arial;
+    @include title-color;
+
   }
   & a {
     margin-left: auto;
     margin-right: 12px;
     z-index: 22;
     transform: translateY(20px);
-    //& > div {
-    //}
   }
 }
+
 .main_container {
   display: flex;
   background-color: whitesmoke;
   flex-flow: column;
   margin-top: 205px;
 }
+
 .vid-container {
   display: flex;
-  z-index: 100;               //** undo
+  z-index: 100; //** undo
   justify-content: center;
   flex-flow: row nowrap;
   position: fixed;
@@ -90,10 +119,10 @@ $green-gold : #827031;
   height: 100%;
   background-color: transparentize(black, .2);
 }
+
 .video_frame {
   margin-top: 20px;
   display: inline-flex;
-  white: red solid 5px;
   border-radius: 8px;
   flex: 0 0 auto;
   flex-direction: column;
@@ -103,24 +132,28 @@ $green-gold : #827031;
     align-self: flex-end;
   }
 }
+
 .imagebox {
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
 }
+
 .bookingSection {
   background-image: url("../assets/IMG_0190.jpg");
   min-height: 300px;
 }
+
 .banner {
   & img {
     width: 100%;
   }
   width: 100%;
 }
-.openingTimes {
 
+.openingTimes {
+  @include main-font;
   padding-top: 20px;
   display: flex;
   flex: 1 1 45%;
@@ -130,12 +163,15 @@ $green-gold : #827031;
     margin-right: 5%;
     & mat-card-title {
       @include title-color;
+      //font-family: arial;
       text-align: center;
-      font-size: 15px;
+      //font-size: 14px;
     }
     & mat-card-content {
       text-align: center;
-      font-size: 12px;
+      //font-size: 12px;
+      @include main-font;
+
     }
   }
   margin-bottom: 20px;
@@ -144,54 +180,101 @@ $green-gold : #827031;
 .menus {
   justify-content: flex-start;
   display: flex;
-  flex: 1 1 30%;
+  //flex: 1 1 30%;
   flex-flow: row wrap;
   margin-bottom: 2%;
   padding-left: 5%;
   padding-right: 3%;
   mat-card {
 
-    display: flex;
+
+    & .separator {
+      width: 100%;
+      height: 0px;
+    }
+     & .pink, .yellow, .purple, .green {
+        border-top: $green-gold 1px solid;
+        //border-top: #d8368e 1px solid;
+    }
+
+    //& .yellow {
+    //  border-top: $green-gold 1px solid;
+    //  //border-top: #fcbc2b 1px solid;
+    //}
+    //& .purple {
+    //  border-top: $green-gold 1px solid;
+    //  //border-top: #aa0c37 1px solid;
+    //}
+    //& .green {
+    //  border-top: $green-gold 1px solid;
+    //  //border-top: #a7b81a 1px solid;
+    //}
+    //& .green {
+    //  border-top: #a7b81a 3px solid;
+    //}
+
+
+    //display: flex;
     flex: 0 0 25%;
-    flex-flow: row wrap;
-    margin-right: 2%;
-    margin-bottom: 10px;
+    //flex-flow: row wrap;
+    //margin-right: 2%;
+    //margin-bottom: 10px;
     & mat-card-title {
+      margin-top: 8px;
       @include title-color;
-      font-family: Chalkduster;
+      //font-family: B;
+      & a > span {
+        color: red;
+      }
     }
     & mat-card-content {
-
-      font-size: 15px;
+      @include main-font;
+      //font-size: 15px;
       justify-content: center;
 
     }
   }
-
-  //& > :nth-child(1) {
-  //
-  //  //left-margin:130px;
-  //}
 }
 
-@media only screen and (max-width:830px) {
+.private-hire {
+  padding: 30px;
+  margin: 2%;
+  mat-card {
+    & mat-card-title {
+      @include title-color;
+      //font-family: Chalkduster;
+    }
+    & mat-card-content {
+      @include main-font;
+      //font-size: 15px;
+      justify-content: center;
+    }
+  }
+}
+
+//& > :nth-child(1) {
+//
+//  //left-margin:130px;
+//}
+
+@media only screen and (max-width: 830px) {
   .toolbar-firstrow {
     display: flex;
-    flex: 1 0  100%;
+    flex: 1 0 100%;
     flex-flow: row wrap;
-    font-family: arial;
-    font-size: 12px;
+    //@include main-font;
+    //font-size: 12px;
     line-height: 12px;
     justify-content: space-around;
     margin-bottom: 15px;
     & .logo {
       justify-content: center;
       flex: 1 1 100%;
-      background-color: blue;
+      //background-color: blue;
       background-color: transparentize(white, .05);
       & img {
         //display: none;
-        margin-left : 1px;
+        margin-left: 1px;
       }
     }
     & .contact-info {
@@ -199,11 +282,8 @@ $green-gold : #827031;
       justify-content: center;
       & .inner {
         padding-right: 30px;
-
       }
-
-      margin-top:20px;
-
+      margin-top: 20px;
     }
   }
   .wp-toolbar {
@@ -221,11 +301,10 @@ $green-gold : #827031;
   }
   .toolbar-secondrow {
     display: flex;
-    flex: 1 1  100%;
+    flex: 1 1 100%;
     flex-flow: row wrap;
     & button {
-      font-family: arial;
-      flex:  1 1 100%;
+      flex: 1 1 100%;
       background-color: whitesmoke;
       border-top: darken(gray, 5%) 1px solid;
     }
@@ -234,10 +313,10 @@ $green-gold : #827031;
     }
   }
 
-.main_container {
- //margin-top:10px;
-  background-color: blue;
-}
+  .main_container {
+    //margin-top:10px;
+    // background-color: blue;
+  }
   .vid-container {
     //display: flex;
     //z-index: 100;               //** undo
@@ -247,13 +326,12 @@ $green-gold : #827031;
     //top: 0;
     width: 320px;
     height: 250px;
-   //height: 560px;
+    //height: 560px;
     background-color: transparentize(black, .2);
   }
   .video_frame {
     margin-top: 20px;
     display: inline-flex;
-    white: red solid 5px;
     border-radius: 8px;
     flex: 0 0 auto;
     flex-direction: row;
@@ -266,12 +344,11 @@ $green-gold : #827031;
   }
   .menus {
     flex: 1 1 100%;
-    mat-card{
+    mat-card {
       //background-color: red;
       flex: 1 1 100%;
     }
   }
-
 
 }
 

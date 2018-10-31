@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild, isDevMode} from '@angular/core';
 import {MatCard} from '@angular/material';
 
 @Component({
@@ -16,12 +16,18 @@ export class AppComponent implements OnInit {
     scrollup = (ev) => console.log(ev);
 
     ngAfterInit() {
-        console.log("william");
+
     }
+
     ngOnInit() {
         window.addEventListener('scroll', this.scrollup);
         this.flag = true;
-        window.setTimeout(() => {
+        if (isDevMode()) {
+            this.flag = false;
+            return;
+
+        }
+        setTimeout(() => {
             const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
             player.load();
 
@@ -61,7 +67,7 @@ export class AppComponent implements OnInit {
     }
 
     scrollToElement(ele) {
-        console.log(ele)
+        console.log(ele);
         const html: HTMLHtmlElement = ele as HTMLHtmlElement;
         console.log(html);
         html.scrollIntoView(true);
