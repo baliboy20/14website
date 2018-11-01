@@ -22,11 +22,11 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         window.addEventListener('scroll', this.scrollup);
         this.flag = true;
-        if (isDevMode()) {
-            this.flag = false;
-            return;
-
-        }
+        // if (isDevMode()) {
+        //     this.flag = false;
+        //     return;
+        //
+        // }
         setTimeout(() => {
             const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
             player.load();

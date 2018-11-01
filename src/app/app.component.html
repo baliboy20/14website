@@ -45,20 +45,24 @@
 
 </div>
 
+
+<div class="vid-container" *ngIf="flag === true">
+    <div class="video_frame">
+        <button mat-icon-button (click)="closeVidWindow()">
+            <span class="material-icons" style="font-size: 34px">close</span>
+        </button>
+        <video src="../assets/videos/food_journey.mp4"
+               controls
+               #player>
+        </video>
+    </div>
+</div>
+
+
 <!---->
 <div class="main_container">
 
-    <div class="vid-container" *ngIf="flag === true">
-        <div class="video_frame">
-            <button mat-icon-button (click)="closeVidWindow()">
-                <span class="material-icons" style="font-size: 34px">close</span>
-            </button>
-            <video src="../assets/videos/food_journey.mp4"
-                   controls
-                   #player>
-            </video>
-        </div>
-    </div>
+
 
     <!-- BANNER-->
     <div class="banner">
