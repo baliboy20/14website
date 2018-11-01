@@ -1,26 +1,35 @@
 $green-gold: #827031;
+$green-gold1: lighten($green-gold, 50%);
+$shadow-wid: .03em;
+$shadow-blur: .08em;
 
 @mixin title-color {
-  color: red;
   color: $green-gold;
-  font-family: SansSerif;
-  font-size: 20px;
-  letter-spacing: .06em;
+  font-family: 'Noto Serif', serif;;
+  font-size: 16px;
+  letter-spacing: .1em;
   //-webkit-text-stroke: 1px $green-gold;
+
 
 }
 
 @mixin main-font {
   //font-family: "Bellerose";
-  font-family: "Helvetica Neue";
+  font-family: 'Open Sans', sans-serif;
   //color: red;
   //line-height: 17px;
-  font-size: 14px;
-
-  letter-spacing: .04em;
+  font-size: 13px;
   font-weight: 300;
-  -webkit-text-stroke: .04em dimgray;
-  paint-order: stroke fill;
+
+  //letter-spacing: .02em;
+  font-weight: 400;
+  //-webkit-text-stroke: .04em dimgray;
+  //paint-order: stroke fill;
+  //text-shadow:
+  //        $shadow-wid $shadow-wid $shadow-blur  $green-gold1,
+  //        -$shadow-wid $shadow-wid $shadow-blur $green-gold1,
+  //        -$shadow-wid -$shadow-wid $shadow-blur$green-gold1,
+  //        $shadow-wid -$shadow-wid $shadow-blur $green-gold1;
   color: darken(chocolate, 20%);
 }
 
@@ -191,45 +200,46 @@ $green-gold: #827031;
     & .separator {
       width: 100%;
       height: 0px;
+
     }
      & .pink, .yellow, .purple, .green {
         border-top: $green-gold 1px solid;
+
         //border-top: #d8368e 1px solid;
     }
 
-    //& .yellow {
-    //  border-top: $green-gold 1px solid;
-    //  //border-top: #fcbc2b 1px solid;
-    //}
-    //& .purple {
-    //  border-top: $green-gold 1px solid;
-    //  //border-top: #aa0c37 1px solid;
-    //}
-    //& .green {
-    //  border-top: $green-gold 1px solid;
-    //  //border-top: #a7b81a 1px solid;
-    //}
-    //& .green {
-    //  border-top: #a7b81a 3px solid;
-    //}
-
-
-    //display: flex;
     flex: 0 0 25%;
-    //flex-flow: row wrap;
-    //margin-right: 2%;
-    //margin-bottom: 10px;
     & mat-card-title {
       margin-top: 8px;
-      @include title-color;
-      //font-family: B;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      & div {
+        display: inline-block;
+        @include  title-color;
+        padding: 0;
+        margin: 0;
+        transform: translateY(-5px);
+        font-size: 18px;
+      }
+      & a {
+        transform: translateY(5px);
+      }
       & a > span {
-        color: red;
+        margin-left: auto;
+        color: dimgray;
+      }
+      & a > i {
+        color: lighten($green-gold, 30%);
+        font-size: 21px;
+        &:hover {
+          color: lighten($green-gold, 0%);
+        }
       }
     }
     & mat-card-content {
       @include main-font;
-      //font-size: 15px;
+      //font-size: 14px;
       justify-content: center;
 
     }

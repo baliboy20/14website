@@ -32,7 +32,8 @@
         <button mat-button (click)="scrollToElement(findus)">FIND US</button>
 
         <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;"
-           (click)="showFirstRow = !showFirstRow">
+           href="../assets/menus/MenuXmas.1.0.pdf" target="_blank"
+        >
 
             <span style="display: inline-block; color: linen; transform: translateY(-6px)">XMAS BOOK NOW
              <img src="../assets/bells.png" alt=""
@@ -64,7 +65,9 @@
         <img src="../assets/BannerWithStrapLine.jpg" alt="">
     </div>
 
+    <!---->
     <!--OPENING TIMES-->
+
     <div class="openingTimes">
 
         <mat-card>
@@ -81,14 +84,19 @@
     </div>
     <div class="menus">
         <mat-card #menus>
+
+            <!---->
+            <!--Weekend Menus-->
             <div class="mat-elevation-z1 separator pink"></div>
+
             <mat-card-title>
-                <div style="display:inline-block">Brunch & Breakfast</div>
-                <a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
-                    <span style="font-size: 13px">Menu</span>
-                    <span class="material-icons">
+
+                <div>Weekend Menus</div>
+                <a  href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf" target="_blank" >
+                    <!--<span style="font-size: 13px">Menu</span>-->
+                    <i class="material-icons"  matTooltip="Download Menu">
                         cloud_download
-                    </span> </a>
+                    </i> </a>
             </mat-card-title>
             <mat-card-content>
 
@@ -103,10 +111,18 @@
             </mat-card-content>
         </mat-card>
 
+        <!---->
+        <!-- Afternoon Tea-->
         <mat-card>
             <div class="mat-elevation-z1 separator yellow"></div>
             <mat-card-title>
-                Afternoon Tea
+                <div>Afternoon Tea</div>
+                <!--<a   href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">-->
+
+                    <!--<i class="material-icons"  matTooltip="Download Menu">-->
+                        <!--cloud_download-->
+                    <!--</i> -->
+                <!--</a>-->
             </mat-card-title>
             <mat-card-content>
                 <p>Afternoon Tea in The Crystal Moon Lounge at Corinthia Hotel offers one of life's great luxuries.
@@ -127,9 +143,17 @@
             </mat-card-content>
         </mat-card>
 
+        <!---->
+        <!--Lunch & Evening-->
         <mat-card>
             <div class="mat-elevation-z1 separator green"></div>
-            <mat-card-title>Lunch & Evening</mat-card-title>
+            <mat-card-title>
+                <div>Lunch & Evening</div>
+                <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">
+                    <i class="material-icons" matTooltip="Download Menu">
+                        cloud_download
+                    </i> </a>
+            </mat-card-title>
             <mat-card-content>
                 <p>Locally sourced, seasonal ingredients are used whenever possible and daily specials showcase the
                     chefs’ imaginative flair. The modern Hudson’s menu features dishes like grilled sea bass with a
@@ -141,23 +165,21 @@
                 <p>Husdon's House in Soho fuses 1930’s glamour with a modern finish with a central bar, private booths,
                     ornate sofas and candlelit tables. Tottenham Court Road Tube Station is just 2 minutes’ walk
                     away.</p>
-                <a href="../assets/menus/Menu%2005-30-18.pdf">
-                    see menu
-                    <i class="material-icons">
-                        cloud_download
-                    </i> </a>
-                <img src="../assets/food/P1000338.jpg"
-                     style="width: 95%"
-                     alt="">
 
             </mat-card-content>
         </mat-card>
 
+        <!---->
         <!--CHRISTMAS DINNER-->
+
         <mat-card>
             <div class="mat-elevation-z1 separator green"></div>
             <mat-card-title>
-                Christmas Dinner / News Years Dinner
+                <div>Christmas/ News Year</div>
+                <a href="../assets/menus/MenuXmas.1.0.pdf" target="_blank">
+                    <i class="material-icons"  matTooltip="Download Menu">
+                        cloud_download
+                    </i> </a>
             </mat-card-title>
             <mat-card-content>
 
@@ -171,12 +193,18 @@
             </mat-card-content>
         </mat-card>
 
+        <!---->
         <!--BAR and Casaual Dining-->
 
         <mat-card>
             <div class="mat-elevation-z1 separator pink"></div>
             <mat-card-title>
-                Bar and Snack Dining
+                <div>Bar and Snack Dining</div>
+                <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
+
+                    <i class="material-icons"  matTooltip="Download Menu">
+                        cloud_download
+                    </i> </a>
             </mat-card-title>
             <mat-card-content>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
@@ -188,24 +216,32 @@
             </mat-card-content>
         </mat-card>
 
-        <mat-card>
-            <div class="mat-elevation-z1 separator yellow"></div>
-            <mat-card-title>
-                Super-Fine Coffees
-            </mat-card-title>
-            <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
-                cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
-                <img src="../assets/ext_drinks/IMG_0280.jpg"
-                     style="width: 95%"
-                     alt="">
-            </mat-card-content>
-        </mat-card>
+        <!---->
+        <!--Super-Fine Coffees-->
+
+        <!--<mat-card>-->
+            <!--<div class="mat-elevation-z1 separator yellow"></div>-->
+            <!--<mat-card-title>-->
+                <!--<div>Super-Fine Coffees</div>-->
+                <!--<a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">-->
+                    <!--<i class="material-icons"  matTooltip="Download Menu">-->
+                        <!--cloud_download-->
+                    <!--</i> </a>-->
+            <!--</mat-card-title>-->
+            <!--<mat-card-content>-->
+                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi-->
+                <!--cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.-->
+                <!--<img src="../assets/ext_drinks/IMG_0280.jpg"-->
+                     <!--style="width: 95%"-->
+                     <!--alt="">-->
+            <!--</mat-card-content>-->
+        <!--</mat-card>-->
 
     </div>
 
-
+    <!---->
     <!-- CORPORATE EVENTS-->
+
     <div class="private-hire" #privateEvents>
         <mat-card>
             <mat-card-title>
