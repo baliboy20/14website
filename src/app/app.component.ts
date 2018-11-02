@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
         console.log(ele);
         const html: HTMLHtmlElement = ele as HTMLHtmlElement;
         console.log(html);
-        html.scrollIntoView(true);
+        html.scrollIntoView({behavior: 'smooth'});
+        // window.scrollBy(0, -150);
     }
 }
