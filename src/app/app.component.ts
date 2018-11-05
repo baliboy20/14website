@@ -1,5 +1,10 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild, isDevMode} from '@angular/core';
-import {MatCard} from '@angular/material';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+  isDevMode} from '@angular/core';
 
 @Component({
     selector: 'app-root',

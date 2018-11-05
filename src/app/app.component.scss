@@ -15,10 +15,11 @@ $shadow-blur: .08em;
 
 @mixin main-font {
   //font-family: "Bellerose";
-  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'palatino', 'myriad pro', sans-serif, arial;
   //color: red;
   //line-height: 17px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 
   //letter-spacing: .02em;
