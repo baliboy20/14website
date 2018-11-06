@@ -1,12 +1,15 @@
 $green-gold: #827031;
-$green-gold1: lighten($green-gold, 50%);
+$green-gold1: orange;
+$h2-grey: #4a4a4a;
 $shadow-wid: .03em;
 $shadow-blur: .08em;
 
 @mixin title-color {
   color: $green-gold;
-  font-family: 'Noto Serif', serif;;
-  font-size: 16px;
+  //color: $green-gold;
+  //font-family: 'Noto Serif', serif;;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
   letter-spacing: .1em;
   //-webkit-text-stroke: 1px $green-gold;
 
@@ -15,11 +18,11 @@ $shadow-blur: .08em;
 
 @mixin main-font {
   //font-family: "Bellerose";
-  //font-family: 'Open Sans', sans-serif;
-  font-family: 'palatino', 'myriad pro', sans-serif, arial;
+  font-family: 'Open Sans', sans-serif;
+
   //color: red;
   //line-height: 17px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
 
   //letter-spacing: .02em;
@@ -31,6 +34,7 @@ $shadow-blur: .08em;
   //        -$shadow-wid $shadow-wid $shadow-blur $green-gold1,
   //        -$shadow-wid -$shadow-wid $shadow-blur$green-gold1,
   //        $shadow-wid -$shadow-wid $shadow-blur $green-gold1;
+  //color: $green-gold1;
   color: darken(chocolate, 20%);
 }
 
