@@ -4,7 +4,7 @@ $h2-grey: #4a4a4a;
 $shadow-wid: .03em;
 $shadow-blur: .08em;
 $tile-bk-cream: rgb(244, 238, 216);
-$tile-font-grey: 4 a4a4a;
+$tile-font-grey: #4a4a4a;
 
 h2 {
   //color: lighten($green-gold, 10%);
@@ -37,7 +37,7 @@ h2 {
   font-family: 'Roboto Slab', serif;
   //font-family: 'Arapey', serif;
   font-size: 18px;
-  font-weight: bolder;
+  font-weight: 200;
   letter-spacing: .08em;
 }
 
@@ -58,7 +58,7 @@ h2 {
   display: flex;
   position: fixed;
   top: 0px;
-  background-color: transparentize(white, .05);
+  background-color: transparentize($tile-bk-cream, .25);
   flex: 1 0 100%;
   width: 100%;
   flex-flow: row wrap;
@@ -435,7 +435,7 @@ h2 {
     flex-flow: row wrap;
     & button {
       flex: 1 1 100%;
-      background-color: $tile-bk-cream;
+      background-color: lighten($tile-bk-cream, 8%);
       border-top: lighten($green-gold, 25%) 1px solid;
     }
     & button:nth-child(6) {
