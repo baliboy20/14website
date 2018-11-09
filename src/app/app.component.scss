@@ -9,7 +9,7 @@ $shadow-blur: .08em;
   //color: $green-gold;
   //font-family: 'Noto Serif', serif;;
   font-family: 'Playfair Display', serif;
-  font-size: 30px;
+  font-size: 16px;
   letter-spacing: .1em;
   //-webkit-text-stroke: 1px $green-gold;
 
@@ -22,7 +22,7 @@ $shadow-blur: .08em;
 
   //color: red;
   //line-height: 17px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
 
   //letter-spacing: .02em;
@@ -35,7 +35,7 @@ $shadow-blur: .08em;
   //        -$shadow-wid -$shadow-wid $shadow-blur$green-gold1,
   //        $shadow-wid -$shadow-wid $shadow-blur $green-gold1;
   //color: $green-gold1;
-  color: darken(chocolate, 20%);
+  color:  transparentize(darken(chocolate, 30%), .4);
 }
 
 .wp-toolbar {
