@@ -58,7 +58,7 @@ h2 {
   display: flex;
   position: fixed;
   top: 0px;
-  background-color: transparentize($tile-bk-cream, .25);
+  background-color: transparentize($tile-bk-cream, .35);
   flex: 1 0 100%;
   width: 100%;
   flex-flow: row wrap;
@@ -125,7 +125,7 @@ h2 {
   flex: 1 1 100%;
   background-color: oldlace;
   flex-flow: column;
-  margin-top: 205px;
+  margin-top: 1px;
 }
 
 .vid-container {
