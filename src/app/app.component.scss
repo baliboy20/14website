@@ -7,17 +7,8 @@ $tile-bk-cream: rgb(244, 238, 216);
 $tile-font-grey: #4a4a4a;
 
 h2 {
-  //color: lighten($green-gold, 10%);
   color: lighten(#4a4a4a, 0%);
-  //color: $green-gold;
-  //color: $green-gold;
-  //font-family: 'Noto Serif', serif;;
   font-family: 'Roboto Slab', serif;
-  //font-family: 'Merriweather', serif;
-  //font-family: 'Arapey', serif;
-  //font-family: 'Cinzel', serif;
-  //font-family: 'Cinzel', serif;
-  //font-family: 'Playfair Display', serif;
   font-weight: 200;
   font-size: 25px;
   letter-spacing: 0;
@@ -58,10 +49,17 @@ h2 {
   display: flex;
   position: fixed;
   top: 0px;
+  //background-image: url(../assets/ext_drinks/IMG_0331_cropped.jpg);
   background-color: transparentize($tile-bk-cream, .35);
   flex: 1 0 100%;
   width: 100%;
   flex-flow: row wrap;
+  .image-layer {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    opacity: .7;
+  }
 }
 
 .toolbar-firstrow {
@@ -75,7 +73,6 @@ h2 {
   padding-bottom: 40px;
 
   & .logo {
-
     & img {
       z-index: 2;
       padding: 12px 18px 12px 18px;
@@ -125,11 +122,10 @@ h2 {
   flex: 1 1 100%;
   background-color: oldlace;
   flex-flow: column;
-  margin-top: 1px;
+  margin-top: 250px;
 }
 
 .vid-container {
-
   z-index: 100; //** undo
   justify-content: center;
   display: flex;
@@ -163,6 +159,16 @@ h2 {
   align-items: center;
 }
 
+.intro {
+  &   h2, p {
+    text-align: center;
+  }
+  p {
+    @include paragraph;
+    width: 70%;
+    padding: 0 10%;
+  }
+}
 .bookingSection {
   background-image: url("../assets/IMG_0190.jpg");
   min-height: 300px;
@@ -225,10 +231,9 @@ h2 {
       background-color: $tile-bk-cream;
       text-align: center;
       //justify-content: center;
-     justify-content: center;
+      justify-content: center;
       align-items: center;
       align-content: center;
-
 
       .title {
 
@@ -239,13 +244,13 @@ h2 {
 
         @include paragraph;
         width: 70%;
-        padding: 0  10%;
+        padding: 0 10%;
       }
       & a {
         display: inline-block;
         background-color: transparent;
         outline: none;
-        margin-top:5px;
+        margin-top: 5px;
         padding: 12px 15px;
         border: #4a4a4a 1px solid;
         border-radius: 3px;

@@ -2,38 +2,29 @@
 
 
 <div class="wp-toolbar mat-elevation-z10">
-    <div class="toolbar-firstrow" *ngIf="showFirstRow">
-
-        <!--<div class="contact-info" style="order:2;">-->
-        <!--<div class="inner">-->
-        <!--<span class="material-icons icons">home</span>-->
-        <!--<span>14 Charterhouse Sq.,-->
-        <!--London EC1M 6AX</span> <br>-->
-
-        <!--<span class="material-icons icons"-->
-        <!--style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
-        <!--<span> 0203 817 4178</span>-->
-        <!--<div style="display: inline-block; width: 15px"></div>-->
-
-        <!--<span class="material-icons icons" style="font-size: 20px; transform: translateY(3px);">email</span>-->
-        <!--<span> 14.green.bookings@gmail.com</span>-->
-        <!--</div>-->
-        <!--</div>-->
-        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
-            <img src="../assets/logo_small.png" alt="">
-
-        </div>
+  <div class="image-layer">
+    <div class="banner">
+      <img src="../assets/ext_drinks/IMG_0331_cropped.jpg" alt="">
     </div>
-    <div class="toolbar-secondrow">
-        <button mat-button (click)="scrollToElement(menus)">MENUS</button>
-        <button mat-button>RESERVE</button>
-        <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
-        <button mat-button (click)="scrollToElement(afternoonTea)">AFTERNOON TEAS</button>
-        <button mat-button (click)="scrollToElement(findus)">FIND US</button>
+  </div>
+  <div class="toolbar-firstrow" *ngIf="showFirstRow">
 
-        <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;"
-           href="../assets/menus/MenuXmas.1.0.pdf" target="_blank"
-        >
+
+    <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
+      <img src="../assets/logo_small.png" alt="">
+
+    </div>
+  </div>
+  <div class="toolbar-secondrow">
+    <button mat-button (click)="scrollToElement(menus)">MENUS</button>
+    <button mat-button>RESERVE</button>
+    <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
+    <button mat-button (click)="scrollToElement(afternoonTea)">AFTERNOON TEAS</button>
+    <button mat-button (click)="scrollToElement(findus)">FIND US</button>
+
+    <a mat-raised-button style="background-image: linear-gradient(to top, #e8575e, #dd4c53) ;"
+       href="../assets/menus/MenuXmas.1.0.pdf" target="_blank"
+    >
 
             <span style="display: inline-block; color: linen; transform: translateY(-6px)">XMAS BOOK NOW
              <img src="../assets/bells.png" alt=""
@@ -41,339 +32,368 @@
             </span></a>
 
 
-    </div>
+  </div>
 
 </div>
 
 
 <div class="vid-container" *ngIf="flag === true">
-    <div class="video_frame">
-        <button mat-icon-button (click)="closeVidWindow()">
-            <span class="material-icons" style="font-size: 34px">close</span>
-        </button>
-        <video src="../assets/videos/food_journey.mp4"
-               controls
-               #player>
-        </video>
-    </div>
+  <div class="video_frame">
+    <button mat-icon-button (click)="closeVidWindow()">
+      <span class="material-icons" style="font-size: 34px">close</span>
+    </button>
+    <video src="../assets/videos/food_journey.mp4"
+           controls
+           #player>
+    </video>
+  </div>
 </div>
 
 
 <!---->
 <div class="main_container">
 
+  <div class="intro">
+    lorem
+    <br><br>
+    <h2>
+      Cafe, Bar , Restaurant, place
+      &Aacute;
+    </h2>
+    <p>
+      With gorgeous views across the hidden away charm of Charterhouse Square, 14 on the Green, spread across acroos two
+      houses in Georgian terrace has a unique appeal to any other cafe/bar
+      any other Cafe/Bar on the fringes of the City.
 
-    <!-- BANNER-->
-    <div class="banner">
-        <img src="../assets/ext_drinks/IMG_0331_cropped.jpg" alt="">
+    </p>
+    <br>
+
+      <p>BRUNCH &#x223c;
+        LUNCH &#x223c;
+        AFTERNOON TEAS &#x223c;
+        COCKTAILS&#x223c;
+        EVENING DINING&#x223c;
+        CORPORATE EVENTS &#x223c;
+        MEETING ROOMS&#x223c;</p>
+
+
+    <br>
+
+  </div>
+
+  <!-- BANNER-->
+  <!--<div class="banner">-->
+  <!--&lt;!&ndash;<img src="../assets/ext_drinks/IMG_0331_cropped.jpg" alt="">&ndash;&gt;-->
+  <!--</div>-->
+
+  <!---->
+  <!--OPENING TIMES
+
+
+  -->
+
+  <div #menus></div>
+  <div #afternoonTea></div>
+
+
+  <section class="menus">
+    <!-- BAR MENU-->
+    <div class="menu-row">
+      <div class="test">
+
+        <div class="title">
+          <h2>BAR MENUS</h2>
+          <hr style="border-top: 1px solid #b91437; width: 85%">
+        </div>
+        <div class="content">
+          <p>
+            Our staff are experts when it comes to the creation of cocktails. We also offer an exceptional range of
+            wine, spirits, liqueurs and beer so whatever you desire we can accommodate.
+          </p>
+          <p>
+            <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
+            <br> <br>
+            <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
+          </p>
+          <!--</div>-->
+
+        </div>
+        <!--<div class="menu-content">-->
+
+        <!--<hr style="border-top: 1px solid #b91437; width: 30%">-->
+
+      </div>
+      <div class="img-container">
+
+        <img src="../assets/ext_drinks/IMG_0280.jpg"
+
+             alt="">
+      </div>
+      <!--<div class="menu-content">here we are</div>-->
+    </div>
+    <hr>
+    <!-- AFTERNOO TEAS-->
+    <div class="menu-row">
+      <div class="menu-content">
+        <div class="title">
+          <h2>AFTERNOON TEAS</h2></div>
+        <hr style="border-top: 1px solid #b91437; width: 30%">
+        <p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
+          Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked
+          Salmon.
+        </p>
+        <p>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
+          <br> <br>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
+        </p>
+      </div>
+      <div class="img-container">
+
+
+      </div>
+    </div>
+    <!-- LUNCH AND EVENINGS-->
+    <div class="menu-row">
+      <div class="menu-content">
+        <div class="title">
+          <h2>BAR MENUS</h2></div>
+        <hr style="border-top: 1px solid #b91437; width: 30%">
+        <p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
+          Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked
+          Salmon.
+        </p>
+        <p>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
+          <br> <br>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
+        </p>
+      </div>
+      <div class="img-container">
+
+
+      </div>
     </div>
 
-    <!---->
-    <!--OPENING TIMES
-
-
-    -->
-
-    <div #menus></div>
-    <div #afternoonTea></div>
-
-
-    <section class="menus">
-        <!-- BAR MENU-->
-        <div class="menu-row">
-            <div class="test">
-
-                <div class="title">
-                    <h2>BAR MENUS</h2>
-                    <hr style="border-top: 1px solid #b91437; width: 85%">
-                </div>
-                <div class="content">
-                    <p>
-                        Our staff are experts when it comes to the creation of cocktails. We also offer an exceptional range of wine, spirits, liqueurs and beer so whatever you desire we can accommodate.
-                    </p>
-                    <p>
-                        <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
-                        <br> <br>
-                        <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
-                    </p>
-                <!--</div>-->
-
-            </div>
-            <!--<div class="menu-content">-->
-
-            <!--<hr style="border-top: 1px solid #b91437; width: 30%">-->
-
-            </div>
-            <div class="img-container">
-
-                <img src="../assets/ext_drinks/IMG_0280.jpg"
-
-                     alt="">
-            </div>
-            <!--<div class="menu-content">here we are</div>-->
-        </div>
-        <hr>
-        <!-- AFTERNOO TEAS-->
-        <div class="menu-row">
-            <div class="menu-content">
-                <div class="title">
-                    <h2>AFTERNOON TEAS</h2></div>
-                <hr style="border-top: 1px solid #b91437; width: 30%">
-                <p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
-                    Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked
-                    Salmon.
-                </p>
-                <p>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
-                    <br> <br>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
-                </p>
-            </div>
-            <div class="img-container">
-
-
-            </div>
-        </div>
-        <!-- LUNCH AND EVENINGS-->
-        <div class="menu-row">
-            <div class="menu-content">
-                <div class="title">
-                    <h2>BAR MENUS</h2></div>
-                <hr style="border-top: 1px solid #b91437; width: 30%">
-                <p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly
-                    Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked
-                    Salmon.
-                </p>
-                <p>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">FOOD MENU</a>
-                    <br> <br>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">DRINKS MENU</a>
-                </p>
-            </div>
-            <div class="img-container">
-
+    <!-- WEEKENDS AND BRUNCH-->
+    <div class="menu-row">
+      <div class="menu-content">
+        <div class="title">
+          <h2>DINING</h2></div>
+        <hr style="border-top: 1px solid #b91437; width: 30%">
+        <p>Our seasonal menu that constantly evolves but with a balance of the finest Traditional English recipes
+          alongside a contemporary edge for informal 2/3 course dinners.
 
-            </div>
-        </div>
+        </p>
+        <p>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">LUNCH-EVENING MENU</a>
+          <br> <br>
+          <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">WEEKEND BRUNCH LUNCH</a>
+        </p>
+      </div>
+      <div class="img-container">
 
-        <!-- WEEKENDS AND BRUNCH-->
-        <div class="menu-row">
-            <div class="menu-content">
-                <div class="title">
-                    <h2>DINING</h2></div>
-                <hr style="border-top: 1px solid #b91437; width: 30%">
-                <p>Our seasonal  menu that constantly evolves  but  with a balance of the finest Traditional English recipes alongside  a contemporary edge  for informal 2/3 course dinners.
 
-                </p>
-                <p>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">LUNCH-EVENING MENU</a>
-                    <br> <br>
-                    <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">WEEKEND BRUNCH LUNCH</a>
-                </p>
-            </div>
-            <div class="img-container">
+      </div>
+    </div>
+  </section>
 
+  <!--<div class="menus">-->
+  <!--<div class="tile">-->
 
-            </div>
-        </div>
-    </section>
 
-    <!--<div class="menus">-->
-    <!--<div class="tile">-->
+  <!--<div class="menu-content-weekend">-->
+  <!--hello-->
 
 
-    <!--<div class="menu-content-weekend">-->
-    <!--hello-->
+  <!--<-->
+  <!--</div>-->
+  <!--<div class="img-container">-->
+  <!--helo-->
+  <!--<img src="../assets/food/brunch_top.png"-->
+  <!--style="width: 50%;height: 50%"-->
+  <!--alt="">-->
+  <!--</div>-->
 
 
-    <!--<-->
-    <!--</div>-->
-    <!--<div class="img-container">-->
-    <!--helo-->
-    <!--<img src="../assets/food/brunch_top.png"-->
-    <!--style="width: 50%;height: 50%"-->
-    <!--alt="">-->
-    <!--</div>-->
+  <!--</div>-->
 
 
-    <!--</div>-->
+  <!--<div class="tile">-->
+  <!--<img src="../assets/food/sconesByCh.jpeg"-->
+  <!--style="width: 50%;height: 50%"-->
+  <!--alt="">-->
 
+  <!--<div class="menu-content-weekend">-->
 
-    <!--<div class="tile">-->
-    <!--<img src="../assets/food/sconesByCh.jpeg"-->
-    <!--style="width: 50%;height: 50%"-->
-    <!--alt="">-->
+  <!--<div class="title"><h2>AFTERNOON TEA</h2></div>-->
 
-    <!--<div class="menu-content-weekend">-->
+  <!--<p>Enjoy a treat with Afternoon Tea in London at Browns-->
+  <!--Our Modern take on the traditional Afternoon Tea is a selection of savouries including a Severn and-->
+  <!--Wye smoked salmon and cream cheese bagel, egg and cress mayonnaise brioche sub, ham with Gruyere-->
+  <!--croissant, heritage tomato-->
 
-    <!--<div class="title"><h2>AFTERNOON TEA</h2></div>-->
+  <!--and tapenade galette, and a goat's cheese and spinach quiche.-->
 
-    <!--<p>Enjoy a treat with Afternoon Tea in London at Browns-->
-    <!--Our Modern take on the traditional Afternoon Tea is a selection of savouries including a Severn and-->
-    <!--Wye smoked salmon and cream cheese bagel, egg and cress mayonnaise brioche sub, ham with Gruyere-->
-    <!--croissant, heritage tomato-->
+  <!--The next course is a selection of warm scones served with a mixture of Bonne Maman jams, clotted-->
+  <!--cream and Lescure butter. To finish, a few sweet mini treats of a lemon meringue pie, raspberry and-->
+  <!--dark chocolate teacakes and rhubarb and custard doughnuts. This is all topped off with homemade-->
+  <!--candy floss.-->
+  <!--</p>-->
 
-    <!--and tapenade galette, and a goat's cheese and spinach quiche.-->
+  <!--</div>-->
 
-    <!--The next course is a selection of warm scones served with a mixture of Bonne Maman jams, clotted-->
-    <!--cream and Lescure butter. To finish, a few sweet mini treats of a lemon meringue pie, raspberry and-->
-    <!--dark chocolate teacakes and rhubarb and custard doughnuts. This is all topped off with homemade-->
-    <!--candy floss.-->
-    <!--</p>-->
+  <!--</div>-->
 
-    <!--</div>-->
 
-    <!--</div>-->
+  <!--<div class="tile">-->
 
 
-    <!--<div class="tile">-->
+  <!--<div class="menu-content-weekend">-->
 
+  <!--<div class="title"><h2>WEEKEND</h2></div>-->
 
-    <!--<div class="menu-content-weekend">-->
+  <!--<p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly-->
+  <!--Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked-->
+  <!--Salmon.-->
+  <!--</p>-->
 
-    <!--<div class="title"><h2>WEEKEND</h2></div>-->
+  <!--</div>-->
 
-    <!--<p>Each day from 7:30am with a Brunch Menu for Weekends. An offering of Freshly-->
-    <!--Squeezed Oranges, Smoothies Freshly baked Pastries, Brick Bagels with Cheeses, Avocado or Smoked-->
-    <!--Salmon.-->
-    <!--</p>-->
 
-    <!--</div>-->
+  <!--<img src="../assets/food/brunch_top.png"-->
+  <!--style="width: 100%"-->
+  <!--alt="">-->
+  <!--&lt;!&ndash;</mat-card-content>&ndash;&gt;-->
+  <!--</div>-->
 
+  <!--<div class="tile">-->
+  <!--<img src="../assets/food/sconesByCh.jpeg"-->
+  <!--style="width: 50%;height: 50%"-->
+  <!--alt="">-->
 
-    <!--<img src="../assets/food/brunch_top.png"-->
-    <!--style="width: 100%"-->
-    <!--alt="">-->
-    <!--&lt;!&ndash;</mat-card-content>&ndash;&gt;-->
-    <!--</div>-->
+  <!--<div class="menu-content-weekend">-->
+
+  <!--<div class="title"><h2>AFTERNOON TEA</h2></div>-->
 
-    <!--<div class="tile">-->
-    <!--<img src="../assets/food/sconesByCh.jpeg"-->
-    <!--style="width: 50%;height: 50%"-->
-    <!--alt="">-->
-
-    <!--<div class="menu-content-weekend">-->
-
-    <!--<div class="title"><h2>AFTERNOON TEA</h2></div>-->
-
-    <!--<p>Enjoy a treat with Afternoon Tea in London at Browns-->
-    <!--Our Modern take on the traditional Afternoon Tea is a selection of savouries including a Severn and-->
-    <!--Wye smoked salmon and cream cheese bagel, egg and cress mayonnaise brioche sub, ham with Gruyere-->
-    <!--croissant, heritage tomato-->
-
-    <!--and tapenade galette, and a goat's cheese and spinach quiche.-->
-
-    <!--The next course is a selection of warm scones served with a mixture of Bonne Maman jams, clotted-->
-    <!--cream and Lescure butter. To finish, a few sweet mini treats of a lemon meringue pie, raspberry and-->
-    <!--dark chocolate teacakes and rhubarb and custard doughnuts. This is all topped off with homemade-->
-    <!--candy floss.-->
-    <!--</p>-->
-
-    <!--</div>-->
-
-    <!--</div>-->
-
-
-    <!--</div>-->
-
-    <!---->
-    <!-- Afternoon Tea-->
-
-
-    <!---->
-    <!--Lunch & Evening-->
-    <mat-card>
-        <div class="mat-elevation-z1 separator green"></div>
-        <mat-card-title>
-            <div>Lunch & Evening</div>
-            <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">
-                <i class="material-icons" matTooltip="Download Menu">
-                    cloud_download
-                </i> </a>
-        </mat-card-title>
-        <mat-card-content>
-            <p>
-                Locally sourced, seasonal ingredients are used whenever possible and daily specials showcase the
-                chefs’ imaginative flair. The modern Hudson’s menu features dishes like grilled sea bass with a
-                light salad, and grilled corn-fed chicken breast with deep-fried mashed potato.</p>
-            For dessert try Hudson’s Mess, the restaurant’s own take on a classic Eton Mess, or the daily-changing
-            cheese board for something more savoury. The contemporary food menu is matched by an exciting array of
-            cocktails, fine wines, house-brewed lagers and real ales.
-
-            <p>Husdon's House in Soho fuses 1930’s glamour with a modern finish with a central bar, private booths,
-                ornate sofas and candlelit tables. Tottenham Court Road Tube Station is just 2 minutes’ walk
-                away.</p>
-
-        </mat-card-content>
-    </mat-card>
-
-    <!---->
-    <!--CHRISTMAS DINNER-->
-
-    <mat-card>
-        <div class="mat-elevation-z1 separator green"></div>
-        <mat-card-title>
-            <div>Christmas/ News Year</div>
-            <a href="../assets/menus/MenuXmas.1.0.pdf" target="_blank">
-                <i class="material-icons" matTooltip="Download Menu">
-                    cloud_download
-                </i> </a>
-        </mat-card-title>
-        <mat-card-content>
-
-            <p>Toast to Christmas in London with a glass of champagne and tasty canapes. With a three-course Christmas
-                dinner, with dishes such as roast turkey with all the trimmings and a helping of traditional
-                Christmas pudding.
-            </p>
-            <img src="../assets/xmas-lunch.jpg"
-                 style="width: 95%"
-                 alt="">
-        </mat-card-content>
-    </mat-card>
-
-    <!---->
-    <!--BAR and Casaual Dining-->
-
-    <mat-card>
-        <div class="mat-elevation-z1 separator pink"></div>
-        <mat-card-title>
-            <div>Bar and Snack Dining</div>
-            <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
-
-                <i class="material-icons" matTooltip="Download Menu">
-                    cloud_download
-                </i> </a>
-        </mat-card-title>
-        <mat-card-content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
-            cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
-            <br><br><br>
-            <img src="../assets/ext_drinks/IMG_0280.jpg"
-                 style="width: 95%"
-                 alt="">
-        </mat-card-content>
-    </mat-card>
-
-    <!---->
-    <!--Super-Fine Coffees-->
-
-    <!--<mat-card>-->
-    <!--<div class="mat-elevation-z1 separator yellow"></div>-->
-    <!--<mat-card-title>-->
-    <!--<div>Super-Fine Coffees</div>-->
-    <!--<a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">-->
-    <!--<i class="material-icons"  matTooltip="Download Menu">-->
-    <!--cloud_download-->
-    <!--</i> </a>-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-content>-->
-    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi-->
-    <!--cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.-->
-    <!--<img src="../assets/ext_drinks/IMG_0280.jpg"-->
-    <!--style="width: 95%"-->
-    <!--alt="">-->
-    <!--</mat-card-content>-->
-    <!--</mat-card>-->
+  <!--<p>Enjoy a treat with Afternoon Tea in London at Browns-->
+  <!--Our Modern take on the traditional Afternoon Tea is a selection of savouries including a Severn and-->
+  <!--Wye smoked salmon and cream cheese bagel, egg and cress mayonnaise brioche sub, ham with Gruyere-->
+  <!--croissant, heritage tomato-->
+
+  <!--and tapenade galette, and a goat's cheese and spinach quiche.-->
+
+  <!--The next course is a selection of warm scones served with a mixture of Bonne Maman jams, clotted-->
+  <!--cream and Lescure butter. To finish, a few sweet mini treats of a lemon meringue pie, raspberry and-->
+  <!--dark chocolate teacakes and rhubarb and custard doughnuts. This is all topped off with homemade-->
+  <!--candy floss.-->
+  <!--</p>-->
+
+  <!--</div>-->
+
+  <!--</div>-->
+
+
+  <!--</div>-->
+
+  <!---->
+  <!-- Afternoon Tea-->
+
+
+  <!---->
+  <!--Lunch & Evening-->
+  <mat-card>
+    <div class="mat-elevation-z1 separator green"></div>
+    <mat-card-title>
+      <div>Lunch & Evening</div>
+      <a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">
+        <i class="material-icons" matTooltip="Download Menu">
+          cloud_download
+        </i> </a>
+    </mat-card-title>
+    <mat-card-content>
+      <p>
+        Locally sourced, seasonal ingredients are used whenever possible and daily specials showcase the
+        chefs’ imaginative flair. The modern Hudson’s menu features dishes like grilled sea bass with a
+        light salad, and grilled corn-fed chicken breast with deep-fried mashed potato.</p>
+      For dessert try Hudson’s Mess, the restaurant’s own take on a classic Eton Mess, or the daily-changing
+      cheese board for something more savoury. The contemporary food menu is matched by an exciting array of
+      cocktails, fine wines, house-brewed lagers and real ales.
+
+      <p>Husdon's House in Soho fuses 1930’s glamour with a modern finish with a central bar, private booths,
+        ornate sofas and candlelit tables. Tottenham Court Road Tube Station is just 2 minutes’ walk
+        away.</p>
+
+    </mat-card-content>
+  </mat-card>
+
+  <!---->
+  <!--CHRISTMAS DINNER-->
+
+  <mat-card>
+    <div class="mat-elevation-z1 separator green"></div>
+    <mat-card-title>
+      <div>Christmas/ News Year</div>
+      <a href="../assets/menus/MenuXmas.1.0.pdf" target="_blank">
+        <i class="material-icons" matTooltip="Download Menu">
+          cloud_download
+        </i> </a>
+    </mat-card-title>
+    <mat-card-content>
+
+      <p>Toast to Christmas in London with a glass of champagne and tasty canapes. With a three-course Christmas
+        dinner, with dishes such as roast turkey with all the trimmings and a helping of traditional
+        Christmas pudding.
+      </p>
+      <img src="../assets/xmas-lunch.jpg"
+           style="width: 95%"
+           alt="">
+    </mat-card-content>
+  </mat-card>
+
+  <!---->
+  <!--BAR and Casaual Dining-->
+
+  <mat-card>
+    <div class="mat-elevation-z1 separator pink"></div>
+    <mat-card-title>
+      <div>Bar and Snack Dining</div>
+      <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">
+
+        <i class="material-icons" matTooltip="Download Menu">
+          cloud_download
+        </i> </a>
+    </mat-card-title>
+    <mat-card-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi
+      cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.
+      <br><br><br>
+      <img src="../assets/ext_drinks/IMG_0280.jpg"
+           style="width: 95%"
+           alt="">
+    </mat-card-content>
+  </mat-card>
+
+  <!---->
+  <!--Super-Fine Coffees-->
+
+  <!--<mat-card>-->
+  <!--<div class="mat-elevation-z1 separator yellow"></div>-->
+  <!--<mat-card-title>-->
+  <!--<div>Super-Fine Coffees</div>-->
+  <!--<a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">-->
+  <!--<i class="material-icons"  matTooltip="Download Menu">-->
+  <!--cloud_download-->
+  <!--</i> </a>-->
+  <!--</mat-card-title>-->
+  <!--<mat-card-content>-->
+  <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi-->
+  <!--cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.-->
+  <!--<img src="../assets/ext_drinks/IMG_0280.jpg"-->
+  <!--style="width: 95%"-->
+  <!--alt="">-->
+  <!--</mat-card-content>-->
+  <!--</mat-card>-->
 
 </div>
 
@@ -381,75 +401,75 @@
 <!-- CORPORATE EVENTS-->
 
 <div class="private-hire" #privateEvents>
-    <mat-card>
-        <mat-card-title>
-            PRIVATE HIRE AND EVENTS
-        </mat-card-title>
-        <mat-card-content>
-            <p>Leaving parties, team celebrations and friends’ get togethers often end up with around this number of
-                guests. It’s a great size –small enough to still feel intimate but big enough not to have to worry
-                about
-                awkward silences.</p>
-            <p>Small team meetings, brainstormings, high level discussions, board dinners and power lunches are top
-                of
-                this category for corporate events, while private do’s are much more varied ranging from birthday
-                parties, celebrations, high end hen and stag dinners and family lunches.</p>
-        </mat-card-content>
-    </mat-card>
+  <mat-card>
+    <mat-card-title>
+      PRIVATE HIRE AND EVENTS
+    </mat-card-title>
+    <mat-card-content>
+      <p>Leaving parties, team celebrations and friends’ get togethers often end up with around this number of
+        guests. It’s a great size –small enough to still feel intimate but big enough not to have to worry
+        about
+        awkward silences.</p>
+      <p>Small team meetings, brainstormings, high level discussions, board dinners and power lunches are top
+        of
+        this category for corporate events, while private do’s are much more varied ranging from birthday
+        parties, celebrations, high end hen and stag dinners and family lunches.</p>
+    </mat-card-content>
+  </mat-card>
 
 </div>
 
 
 <div class="openingTimes">
 
-    <mat-card>
-        <mat-card-title>Mon - Fri</mat-card-title>
-        <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
-    </mat-card>
+  <mat-card>
+    <mat-card-title>Mon - Fri</mat-card-title>
+    <mat-card-content>From 7:00am to 9:00pm</mat-card-content>
+  </mat-card>
 
-    <mat-card>
-        <mat-card-title>Sat - Sun</mat-card-title>
-        <mat-card-content>From 10:00am to 5:00pm</mat-card-content>
-    </mat-card>
+  <mat-card>
+    <mat-card-title>Sat - Sun</mat-card-title>
+    <mat-card-content>From 10:00am to 5:00pm</mat-card-content>
+  </mat-card>
 
 
 </div>
 
 
 <mat-card class="find-us" #findus>
-    <span #findus></span>
-    <mat-card-title>GETTING HERE</mat-card-title>
-    <mat-card-content>
-        <p>
-            Located in Chartehouse Sq, immediately next door to the Charterhouse Museum.
+  <span #findus></span>
+  <mat-card-title>GETTING HERE</mat-card-title>
+  <mat-card-content>
+    <p>
+      Located in Chartehouse Sq, immediately next door to the Charterhouse Museum.
 
-            <br>
+      <br>
 
-            <span class="material-icons" style="font-size: 20px;">home</span>
-            <span>14 CHARTERHOUSE SQ,</span>
-            <span>LONDON EC1M 6AX</span>
-            <br>
-            <br>
-            <!--<span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
-            <!--<span> 0203 817 4178</span>-->
-            <!--<br>-->
-            <!--<span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span>-->
-            <!--<span> 14.green.main@gmail.com</span>-->
+      <span class="material-icons" style="font-size: 20px;">home</span>
+      <span>14 CHARTERHOUSE SQ,</span>
+      <span>LONDON EC1M 6AX</span>
+      <br>
+      <br>
+      <!--<span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
+      <!--<span> 0203 817 4178</span>-->
+      <!--<br>-->
+      <!--<span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span>-->
+      <!--<span> 14.green.main@gmail.com</span>-->
 
 
-            <b>DIRECTIONS</b>
-            <br>
-            <span class="material-icons" style="font-size: 20px;">train</span>
-            <span> Farrindon Station, Thameslink, Crossrail, </span>
-            <br>
-            <span class="material-icons" style="font-size: 20px;">subway</span>
-            <span> Farrindon Station, Thameslink, Crossrail, </span>
+      <b>DIRECTIONS</b>
+      <br>
+      <span class="material-icons" style="font-size: 20px;">train</span>
+      <span> Farrindon Station, Thameslink, Crossrail, </span>
+      <br>
+      <span class="material-icons" style="font-size: 20px;">subway</span>
+      <span> Farrindon Station, Thameslink, Crossrail, </span>
 
-        </p>
-    </mat-card-content>
-    <mat-card-content>
-        <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
-                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </mat-card-content>
+    </p>
+  </mat-card-content>
+  <mat-card-content>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
+      width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </mat-card-content>
 </mat-card>
