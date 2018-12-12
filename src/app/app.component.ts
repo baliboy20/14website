@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
         window.addEventListener('scroll', this.scrollup);
         this.flag = true;
         if (isDevMode()) {
-            this.flag = false;
+            // this.flag = false;
             return;
 
         }
