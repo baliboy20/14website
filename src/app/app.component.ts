@@ -26,34 +26,38 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         window.addEventListener('scroll', this.scrollup);
+        console.log('hello dolly');
         this.flag = true;
         if (isDevMode()) {
-            this.flag = false;
-            return;
+            this.flag = true;
+            //git adreturn;
 
         }
+        console.log('INsie settimeout 9991');
         setTimeout(() => {
             const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
             player.load();
-
+console.log('INsie settimeout');
             player.playbackRate = 1;
             player.onended = () => this.flag = false;
             if (this.showvid) {
+                console.log('this show vid is good');
                 player.currentTime = 1;
                 player.play();
             }
         }, 500);
+
     }
 
     load(event) {
-        console.log('play video');
+        console.log('video loaded');
         // player.play();
     }
 
     closeVideoWindow() {
         const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
         player.pause();
-        player.currentTime = 0;
+        player.currentTime = 2;
         this.showvid = false;
     }
 
