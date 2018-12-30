@@ -8,14 +8,14 @@
       <div class="inner">
         <span class="material-icons icons">home</span>
         <span>14 Charterhouse Square,
-                 London EC1M 6AX</span> <br>
+                 London</span> <br>
 
         <span class="material-icons icons"
               style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>
-        <span> 0203 817 4178</span>
-        <div style="display: inline-block; width: 15px"></div>
+        <span> 0203 817 4178</span><br>
+        <!--<div style="display: inline-block; width: 15px"></div>-->
 
-        <span class="material-icons icons" style="font-size: 20px; transform: translateY(3px);">email</span>
+        <span class="material-icons icons" style="font-size: 18px; transform: translateY(3px);">email</span>
         <span> 14.green.bookings@gmail.com</span>
       </div>
     </div>
@@ -37,10 +37,12 @@
 
 
 <div class="vid-container" *ngIf="flag === true">
+  <button mat-icon-button
+          (click)="closeVidWindow()">
+    <span class="material-icons" style="font-size: 34px">close</span>
+  </button>
   <div class="video_frame">
-    <button mat-icon-button (click)="closeVidWindow()">
-      <span class="material-icons" style="font-size: 34px">close</span>
-    </button>
+
     <video src="../assets/videos/have_a%20_little_drink.mp4"
            controls
            #player>
@@ -68,44 +70,65 @@
   <!---->
   <!--OPENING TIMES-->
 
+  <div class="openingTimes">
+
+    <mat-card>
+      <mat-card-title>Mon - Fri</mat-card-title>
+      <mat-card-content>7:00am to 9:00pm</mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Sat - Sun</mat-card-title>
+      <mat-card-content>Events  & pre-bookings only
+        <br>
+        <p>General Opening from April</p>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+
+
   <div #menus></div>
   <div #afternoonTea></div>
   <div class="menus">
-    <mat-card>
+    <!--<mat-card>-->
+      <!--&lt;!&ndash;&ndash;&gt;-->
+      <!--&lt;!&ndash;Weekend Menus&ndash;&gt;-->
 
-      <!---->
-      <!--Weekend Menus-->
-      <div class="mat-elevation-z1 separator pink"></div>
+      <!--<div class="mat-elevation-z1 separator pink"></div>-->
+      <!--<div class="mat-elevation-z1 separator pink"></div>-->
 
-      <mat-card-title>
+      <!--<mat-card-title>-->
 
-        <div>Weekend Menus</div>
+        <!--<div>Weekend Menus</div>-->
 
-      </mat-card-title>
-      <mat-card-content>
+      <!--</mat-card-title>-->
+      <!--<mat-card-content>-->
 
-        <p>From March 2019, our Brunch Menu will be available from 10am Saturday and Sunday. Traditional Brunch dishes
-          such as Eggs Royale, Avocado on Open toast including our own exclusive recipes. </p>
-        <br>
-        <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button
-           style="color: whitesmoke; background-color: #827031;">
-          <!--<span style="font-size: 13px">Menu</span>-->
-          <!--<i class="material-icons" matTooltip="Download Menu" style="color: whitesmoke">-->
-          <!--cloud_download-->
-          <!--</i> -->
-          View Menu
-        </a>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--<p>From March 2019, our Brunch Menu will be available from 10am Saturday and Sunday. Traditional Brunch dishes-->
+          <!--such as Eggs Royale, Avocado on Open toast including our own exclusive recipes. </p>-->
+        <!--<br>-->
+        <!--<a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button-->
+           <!--style="color: whitesmoke; background-color: #827031;">-->
+          <!--&lt;!&ndash;<span style="font-size: 13px">Menu</span>&ndash;&gt;-->
+          <!--&lt;!&ndash;<i class="material-icons" matTooltip="Download Menu" style="color: whitesmoke">&ndash;&gt;-->
+          <!--&lt;!&ndash;cloud_download&ndash;&gt;-->
+          <!--&lt;!&ndash;</i> &ndash;&gt;-->
+          <!--View Menu-->
+        <!--</a>-->
+        <!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
 
-        <img src="../assets/food/brunch_top.png"
-             style="width: 95%"
-             alt="">
-      </mat-card-content>
-    </mat-card>
+        <!--<img src="../assets/food/brunch_top.png"-->
+             <!--style="width: 95%"-->
+             <!--alt="">-->
+      <!--</mat-card-content>-->
+    <!--</mat-card>-->
 
     <!---->
     <!-- Afternoon Tea-->
     <mat-card>
+      <div class="mat-elevation-z1 separator yellow"></div>
       <div class="mat-elevation-z1 separator yellow"></div>
       <mat-card-title>
         <div>Afternoon Tea</div>
@@ -138,6 +161,7 @@
     <!--Lunch & Evening-->
     <mat-card>
       <div class="mat-elevation-z1 separator green"></div>
+      <div class="mat-elevation-z1 separator green"></div>
       <mat-card-title>
         <div>Lunch & Evening</div>
         <!--<a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">-->
@@ -146,6 +170,12 @@
           <!--</i> </a>-->
       </mat-card-title>
       <mat-card-content>
+        <video src="../assets/videos/food_journey.mp4"
+               width="100%"
+               height="100%"
+               controls
+               #foodjourney
+        ></video>
         <p>
           Our menu reflects the seasons offerings but also the inclinations of our diners for each time of the year. We pride
           ourselves on presenting food that is vibrant in flavours and colours, our dishes to reflecting the latest of
@@ -157,45 +187,13 @@
         </a>
         <p></p>
 
-        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/z3ItEdpX2TA?start=2" frameborder="0"
-        #player
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-        </iframe>
       </mat-card-content>
     </mat-card>
 
-    <!---->
-    <!--CHRISTMAS DINNER-->
-
-    <!--<mat-card>-->
-    <!--<div class="mat-elevation-z1 separator green"></div>-->
-    <!--<mat-card-title>-->
-    <!--<div>Christmas/ News Year</div>-->
-    <!--<a href="../assets/menus/MenuXmas.1.0.pdf" target="_blank">-->
-    <!--<i class="material-icons" matTooltip="Download Menu">-->
-    <!--cloud_download-->
-    <!--</i> </a>-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-content>-->
-
-    <!--<p>Toast to Christmas in London with a glass of champagne and tasty canapes. With a three-course Christmas-->
-    <!--dinner, with dishes such as roast turkey with all the trimmings and a helping of traditional-->
-    <!--Christmas pudding.-->
-    <!--</p>-->
-    <!--<a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf" target="_blank" mat-raised-button style="text-align:center; color: whitesmoke; background-color: #827031;">-->
-    <!--View Menu-->
-    <!--</a>-->
-    <!--<img src="../assets/xmas-lunch.jpg"-->
-    <!--style="width: 95%"-->
-    <!--alt="">-->
-    <!--</mat-card-content>-->
-    <!--</mat-card>-->
-
-    <!---->
-    <!--BAR and Casaual Dining-->
+    <!--BAR-->
 
     <mat-card>
+      <div class="mat-elevation-z1 separator pink"></div>
       <div class="mat-elevation-z1 separator pink"></div>
       <mat-card-title>
         <div>Ales Wine & Cocktails</div>
@@ -211,16 +209,33 @@
         <p>
 
         </p>
+        <!--<video src="../assets/videos/have_a%20_little_drink.mp4"-->
+               <!---->
+               <!--controls-->
+               <!--&gt;-->
+        <!--</video>-->
 
+        <!--<iframe width="100%"-->
+                <!--height="400px"-->
+                <!--src="../assets/videos/have_a%20_little_drink.mp4?rel=0"-->
+                <!--frameborder="0"-->
+        <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">-->
+<!---->
+        <!--</iframe>-->
+        <video src="../assets/videos/have_a%20_little_drink.mp4"
+               width="100%"
+               controls
+               #drinkvid
+         ></video>
         <br><br><br>
         <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf" target="_blank" mat-raised-button
            style="color: whitesmoke; background-color: #827031;">
           View Menu
         </a>
-        <br>
-        <img src="../assets/ext_drinks/IMG_0280.jpg"
-             style="width: 95%"
-             alt="">
+        <!--<br>-->
+        <!--<img src="../assets/ext_drinks/IMG_0280.jpg"-->
+             <!--style="width: 95%"-->
+             <!--alt="">-->
       </mat-card-content>
     </mat-card>
 
@@ -257,41 +272,23 @@
       </mat-card-title>
       <mat-card-content>
         <img src="../assets/meeting_room/P1000609.jpg"
-             style="width: 25%"
+             style="width: 100%;"
              alt="">
-        Leaving parties, team celebrations and friends’ get togethers often end up with around this number of
-          guests. It’s a great size –small enough to still feel intimate but big enough not to have to worry
-          about
-          awkward silences.
+       <p style="position: absolute;
+       color: snow;text-align: center;
+       top:550px"> Leaving parties, team celebrations and friends’ get togethers often end up with around this number of
+          about awkward silences.
+       </p>
         <p>Small team meetings, brainstormings, high level discussions, board dinners and power lunches are top
           of
           this category for corporate events, while private do’s are much more varied ranging from birthday
           parties, celebrations, high end hen and stag dinners and family lunches.</p>
-        <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf">
 
-          <i class="material-icons" matTooltip="Download Menu">
-            cloud_download
-          </i> </a>
       </mat-card-content>
     </mat-card>
 
   </div>
 
-
-  <div class="openingTimes">
-
-    <mat-card>
-      <mat-card-title>Mon - Fri</mat-card-title>
-      <mat-card-content>7:00am to 9:00pm</mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>Sat - Sun</mat-card-title>
-      <mat-card-content>Open only for Pre-booked events</mat-card-content>
-    </mat-card>
-
-
-  </div>
 
   <mat-card class="find-us" #findus>
     <span #findus></span>

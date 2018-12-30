@@ -20,9 +20,10 @@ $shadow-blur: .08em;
 }
 
 .wp-toolbar {
-  padding-top: 40px;
-  padding-left: 0;
+  padding-top: 20px;
+  padding-left: 0px;
   padding-right: 0;
+  padding-bottom: 10px;
   margin: 0;
   z-index: 10;
   display: flex;
@@ -45,8 +46,11 @@ $shadow-blur: .08em;
   //font-size: 12px;
   line-height: 12px;
   justify-content: center;
+  padding-bottom: 20px;
+  //height: 0;
 
   & .logo {
+
     align-self: center;
     flex: 1 1 50%;
     background-color: transparentize(white, .05);
@@ -70,9 +74,9 @@ $shadow-blur: .08em;
       padding-right: 30px;
       line-height: 20px;
       & .icons {
-        font-size: 20px;
+        font-size: 18px;
         transform: translate(-9px, 3px);
-        color: $green-gold;
+        color: transparentize($green-gold,.5);
       }
     }
   }
@@ -85,6 +89,9 @@ $shadow-blur: .08em;
   flex-flow: row wrap;
   & button {
     @include title-color;
+   &:first-child{
+      margin-left: 50px;
+    }
 
   }
   & a {
@@ -104,29 +111,38 @@ $shadow-blur: .08em;
 
 .vid-container {
   z-index: 100; //** undo
-  justify-content: center;
-  display: flex;
+  justify-content: flex-start;
+  display: block;
   position: fixed;
-  top: 0;
-  left:0;
+  top: 0px;
+  left: 0;
   right: 0;
   bottom: 0;
 
   background-color: transparentize(black, .2);
+  & button {
+    display: inline-block;
+    margin: 10px;
+    z-index: 101;
+    color: snow;
+    align-self: flex-start;
+  }
 }
 
 .video_frame {
-  display: inline-flex;
-  margin-top: 20px;
-//background-color: red;
-  border-radius: 8px;
- justify-self: center;
-  flex-direction: column;
+  //display: fixed;
+  //background-color:red;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  //margin: auto 0;
 
-  & button {
-    color: white;
-    //align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  & > video {
+
   }
+
 }
 
 .imagebox {
@@ -174,17 +190,24 @@ $shadow-blur: .08em;
 }
 
 .menus {
-  justify-content: flex-start;
+  justify-content: space-around;
   display: flex;
-  //flex: 1 1 30%;
+
+  flex: 1;
   flex-flow: row wrap;
   margin-bottom: 2%;
   padding-left: 5%;
   padding-right: 3%;
+  //background-color: #3f51b5;
+
   mat-card {
+    flex: 1  100%;
+margin-right: 10px;
+
     & .separator {
       width: 100%;
       height: 0px;
+      //margin-bottom: 5px;
     }
      & .pink, .yellow, .purple, .green {
         border-top: $green-gold 1px solid;
@@ -192,7 +215,6 @@ $shadow-blur: .08em;
         //border-top: #d8368e 1px solid;
     }
 
-    flex: 0 0 25%;
     & mat-card-title {
       margin-top: 8px;
       display: flex;
@@ -238,8 +260,10 @@ $shadow-blur: .08em;
       @include title-color;
     }
     & mat-card-content {
+      display: inline-block;
       @include main-font;
-      justify-content: center;
+      //float: left;
+      //background-image: url(../assets/meeting_room/P1000609.jpg);
     }
   }
 }
@@ -259,6 +283,7 @@ $shadow-blur: .08em;
 //==================================================================================================================================
 @media only screen and (max-width: 830px) {
   .toolbar-firstrow {
+    //background-color: #3f51b5;
     display: flex;
     flex: 1 0 100%;
     flex-flow: row wrap;
@@ -266,9 +291,13 @@ $shadow-blur: .08em;
     justify-content: space-around;
     margin-bottom: 15px;
     & .logo {
+      //background-color: #3f51b5;
+
       justify-content: center;
+      //align-content: flex-start;
       flex: 1 1 100%;
-      background-color: transparentize(white, .05);
+      //background-color: #3f51b5;
+      //background-color: transparentize(white, .05);
       & img {
         margin-left: 1px;
       }
@@ -309,6 +338,9 @@ $shadow-blur: .08em;
       flex: 1 1 100%;
       background-color: whitesmoke;
       border-top: darken(gray, 5%) 1px solid;
+      &:first-child{
+        margin-left: 0px;
+      }
     }
     & button:nth-child(6) {
       margin-left: auto;
