@@ -2,7 +2,7 @@
 
 
 <div class="wp-toolbar mat-elevation-z10">
-  <div class="toolbar-firstrow" *ngIf="showFirstRow">
+  <div class="toolbar-firstrow" *ngIf="showFirstRow" [@collapseTrigger] >
 
     <div class="contact-info" style="order:2;">
       <div class="inner">
@@ -26,7 +26,7 @@
   </div>
   <div class="toolbar-secondrow">
     <button mat-button (click)="scrollToElement(menus)">MENUS</button>
-    <button mat-button>RESERVE</button>
+    <button mat-button (click)="showFirstRow = !showFirstRow">RESERVE</button>
     <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
     <button mat-button (click)="scrollToElement(afternoonTea)">AFTERNOON TEAS</button>
     <button mat-button (click)="scrollToElement(findus)">FIND US</button>

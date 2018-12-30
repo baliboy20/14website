@@ -6,11 +6,30 @@ import {
   ViewChild,
   isDevMode
 } from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('collapseTrigger', [
+      transition(':enter', [animate('300ms ease-in'),
+      style({ transform: 'scale(1)'})]),
+      transition(':leave', [animate('300ms ease-out'),
+      style({height: 0, display: 'none', transform: 'scale(0.3)'})]),
+      state(':leave', style({height: 0, display: 'none', transform: 'scale(0.3)'})),
+      state(':enter', style({height: '*', transform: 'scale(1)'})),
+   ] )
+  ]
 })
 export class AppComponent implements OnInit {
   showvid = true;
@@ -21,7 +40,13 @@ export class AppComponent implements OnInit {
   @ViewChild('drinkvid') drinkvid: ElementRef;
   @ViewChild('foodjourney') foodjourney: ElementRef;
 
-  scrollup = (ev) => console.log(ev);
+  scrollup = (ev) => {
+    if(window.scrollY === 0) {
+      this.showFirstRow = true;
+    } else {
+      this.showFirstRow = false;
+    }
+  };
 
   ngAfterInit() {
 
