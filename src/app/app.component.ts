@@ -4,9 +4,9 @@ import {
   HostListener,
   OnInit,
   ViewChild,
-  isDevMode
+  isDevMode,
+  HostBinding,
 } from '@angular/core';
-import {Component, HostBinding} from '@angular/core';
 import {
   trigger,
   state,
@@ -22,31 +22,38 @@ import {
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('collapseTrigger', [
-      transition(':enter', [animate('300ms ease-in'),
-      style({ transform: 'scale(1)'})]),
-      transition(':leave', [animate('300ms ease-out'),
-      style({height: 0, display: 'none', transform: 'scale(0.3)'})]),
-      state(':leave', style({height: 0, display: 'none', transform: 'scale(0.3)'})),
-      state(':enter', style({height: '*', transform: 'scale(1)'})),
-   ] )
-  ]
+      transition(':enter', [
+        style({transform: 'scale(0)'}),
+        animate('300ms  ease-out',
+        style({transform: 'scale(1)'}))]),
+
+        transition(':leave', [animate('300ms ease-out'),
+          style({height: 0, display: 'none', transform: 'scale(0.3)'})])
+      ])
+    ]
 })
 export class AppComponent implements OnInit {
-  showvid = true;
+  showvid = false;
   showFirstRow = true;
-  flag = true;
+  flag = false;
   lastScrollPos = 0;
+  showFood = false;
+  showDrink = false;
   @ViewChild('player') player: ElementRef;
   @ViewChild('drinkvid') drinkvid: ElementRef;
   @ViewChild('foodjourney') foodjourney: ElementRef;
 
   scrollup = (ev) => {
-    if(window.scrollY === 0) {
+    const lastpos = this.lastScrollPos;
+    this.lastScrollPos = window.scrollY;
+    const dir = (lastpos > window.scrollY) ? 'up' : 'down';
+    if (window.scrollY <= 0 && dir === 'up') {
       this.showFirstRow = true;
     } else {
-      this.showFirstRow = false;
+      this.showFirstRow = lastpos < 0;
     }
-  };
+    console.log('scroll event', window.scrollY);
+  }
 
   ngAfterInit() {
 
@@ -65,13 +72,14 @@ export class AppComponent implements OnInit {
 
     if (isDevMode()) {
       this.flag = false;
-      // git adreturn;
+      return;
 
     }
     setTimeout(() => {
       const player: HTMLVideoElement = this.player.nativeElement as HTMLVideoElement;
       player.load();
       player.playbackRate = 1;
+      // player.onload((e: Event) => console.log('player has beenn loaded'))
       player.onended = () => this.flag = false;
       if (this.showvid) {
         console.log('this show vid is good');
@@ -83,7 +91,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  load(event) {
+  onLoad(event) {
     console.log('video loaded');
     // player.play();
   }
@@ -106,7 +114,6 @@ export class AppComponent implements OnInit {
     player.currentTime = 0;
     this.showvid = false;
     this.flag = false;
-    console.log('hello' + this.flag);
   }
 
   scrollToElement(ele) {

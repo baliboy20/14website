@@ -47,7 +47,7 @@ $shadow-blur: .08em;
   line-height: 12px;
   justify-content: center;
   padding-bottom: 20px;
-  //transform: scale(.3);
+  transform: scale(1);
   //height: 0;
 
   & .logo {
@@ -267,6 +267,23 @@ margin-right: 10px;
       //background-image: url(../assets/meeting_room/P1000609.jpg);
     }
   }
+}
+$overlay-shadow : black;
+
+.meeting-room-overlay {
+  position: absolute;
+  color: snow;
+  text-align: left;
+  font-family: "Arial Rounded MT Bold";
+  opacity: .8;
+  text-shadow:
+    0 2px 0px $overlay-shadow,
+  2px 0px 0px $overlay-shadow,
+  -2px 0px 0px $overlay-shadow,
+  0 -2px 0px $overlay-shadow;
+  padding: 20%;
+  font-size: 26px;
+  top: 10%
 }
 
 .find-us {

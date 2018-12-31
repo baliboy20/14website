@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialsModule} from './materials/materials.module';
+import {DeferLoadModule} from '@trademe/ng-defer-load';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {MaterialsModule} from './materials/materials.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialsModule,
+    DeferLoadModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
