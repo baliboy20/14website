@@ -15,7 +15,7 @@ $shadow-blur: .08em;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: mix(chocolate, dimgray,20%);
+  color: mix(chocolate, dimgray, 20%);
   //color: darken(chocolate, 20%);
 }
 
@@ -77,7 +77,7 @@ $shadow-blur: .08em;
       & .icons {
         font-size: 18px;
         transform: translate(-9px, 3px);
-        color: transparentize($green-gold,.5);
+        color: transparentize($green-gold, .5);
       }
     }
   }
@@ -90,7 +90,7 @@ $shadow-blur: .08em;
   flex-flow: row wrap;
   & button {
     @include title-color;
-   &:first-child{
+    &:first-child {
       margin-left: 50px;
     }
 
@@ -199,21 +199,27 @@ $shadow-blur: .08em;
   margin-bottom: 2%;
   padding-left: 5%;
   padding-right: 3%;
-  //background-color: #3f51b5;
 
   mat-card {
-    flex: 1  100%;
-margin-right: 10px;
 
-    & .separator {
-      width: 100%;
-      height: 0px;
-      //margin-bottom: 5px;
+    margin-right: 10px;
+
+    & mat-card-title {
+      flex: 1 100%;
+      flex-flow: column nowrap;
+
+      .separator {
+        display: inline-block;
+        width: 65%;
+        height: 0px;
+        //background-color: blue;
+      }
     }
-     & .pink, .yellow, .purple, .green {
-        border-top: $green-gold 1px solid;
+    & .pink, .yellow, .purple, .green {
+      border-top: transparentize($green-gold, .3) 1px solid;
+      margin-top: 10px;
 
-        //border-top: #d8368e 1px solid;
+      //border-top: #d8368e 1px solid;
     }
 
     & mat-card-title {
@@ -223,7 +229,7 @@ margin-right: 10px;
       width: 100%;
       & div {
         display: inline-block;
-        @include  title-color;
+        @include title-color;
         padding: 0;
         margin: 0;
         transform: translateY(-5px);
@@ -261,40 +267,57 @@ margin-right: 10px;
       @include title-color;
     }
     & mat-card-content {
-      display: inline-block;
-      @include main-font;
-      //float: left;
+
+      & .content-container {
+        display: flex;
+        flex: 1 1 100%;
+        $overlay-shadow: white;
+        background-image: url(../assets/meeting_room/P1000609.jpg);
+background-color: #827031;
+        height: auto;
+        width: auto;
+
+        .imgUnderlay {
+          width: 100%;
+          height: 100%;
+        }
+
+        .meeting-room-overlay {
+          display: flex;
+          flex-flow: column nowrap;
+          position: absolute;
+          color: white;
+          text-align: left;
+          font-family: "Arial Unicode MS";
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+          padding: 10%;
+          font-size: 1.4rem;
+          top: 10%;
+          width: auto;
+          height: auto;
+          z-index: 1;
+
+          & li {
+            flex: 0 1 22%;
+            display: flex;
+            text-decoration: dotted;
+          }
+        }
+      }
+
       //background-image: url(../assets/meeting_room/P1000609.jpg);
     }
   }
 }
-$overlay-shadow : black;
-
-.meeting-room-overlay {
-  position: absolute;
-  color: snow;
-  text-align: left;
-  font-family: "Arial Rounded MT Bold";
-  opacity: .8;
-  text-shadow:
-    0 2px 0px $overlay-shadow,
-  2px 0px 0px $overlay-shadow,
-  -2px 0px 0px $overlay-shadow,
-  0 -2px 0px $overlay-shadow;
-  padding: 20%;
-  font-size: 26px;
-  top: 10%
-}
 
 .find-us {
- & > mat-card-content  {
-   @include main-font;
- }
+  & > mat-card-content {
+    @include main-font;
+  }
   & mat-card-title {
     @include title-color;
   }
 }
-
 
 //==================================================================================================================================
 //               MEDIA QUERIES
@@ -356,7 +379,7 @@ $overlay-shadow : black;
       flex: 1 1 100%;
       background-color: whitesmoke;
       border-top: darken(gray, 5%) 1px solid;
-      &:first-child{
+      &:first-child {
         margin-left: 0px;
       }
     }
@@ -366,7 +389,7 @@ $overlay-shadow : black;
   }
 
   .main_container {
-    margin-top:10px;
+    margin-top: 10px;
     // background-color: blue;
   }
   .video_frame {
@@ -375,20 +398,20 @@ $overlay-shadow : black;
       width: 100%;
     }
   }
-    //margin-top: 20px;
-    //display: inline-flex;
-    //border-radius: 8px;
-    //flex: 0 0 auto;
-    //flex-direction: row;
+  //margin-top: 20px;
+  //display: inline-flex;
+  //border-radius: 8px;
+  //flex: 0 0 auto;
+  //flex-direction: row;
 
-    & button {
-      //color: white;
-      //align-self: flex-end;
-    }
+  & button {
+    //color: white;
+    //align-self: flex-end;
+  }
 
   //}
   .openingTimes {
-    & mat-card{
+    & mat-card {
       margin-bottom: 5px;
     }
   }
@@ -400,5 +423,9 @@ $overlay-shadow : black;
     }
   }
 
+  .meeting-room-overlay {
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
 }
 

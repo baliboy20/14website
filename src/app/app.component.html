@@ -95,13 +95,12 @@
     <!---->
     <!-- Afternoon Tea-->
     <mat-card>
-      <div class="mat-elevation-z1 separator yellow"></div>
-      <div class="mat-elevation-z1 separator yellow"></div>
       <mat-card-title>
+        <!--<div class="mat-elevation-z1 separator green"></div>-->
+        <div class="mat-elevation-z1 separator green"></div>
         <div>Afternoon Tea</div>
       </mat-card-title>
       <mat-card-content>
-
         <p>
           The perfect setting for an Afternoon Tea with friends or colleagues. Our Garden room has charming views
           overlooking the ancient trees and historic building of Charterhouse Square.
@@ -131,17 +130,11 @@
     <!---->
     <!--Lunch & Evening-->
     <mat-card>
-      <div class="mat-elevation-z1 separator green"></div>
-      <div class="mat-elevation-z1 separator green"></div>
       <mat-card-title>
+        <div class="mat-elevation-z1 separator green"></div>
         <div>Lunch & Evening</div>
-        <!--<a href="../assets/menus/MenuLunch.1.0.pdf" target="_blank">-->
-          <!--<i class="material-icons" matTooltip="Download Menu">-->
-            <!--cloud_download-->
-          <!--</i> </a>-->
       </mat-card-title>
       <mat-card-content (deferLoad)="showFood=true">
-
         <ng-container *ngIf="showFood">
         <video src="../assets/videos/food_journey.mp4"
                width="100%"
@@ -168,11 +161,9 @@
     <!--BAR-->
 
     <mat-card>
-      <div class="mat-elevation-z1 separator pink"></div>
-      <div class="mat-elevation-z1 separator pink"></div>
       <mat-card-title>
+        <div class="mat-elevation-z1 separator pink"></div>
         <div>Ales Wine & Cocktails</div>
-
       </mat-card-title>
       <mat-card-content (deferLoad)="showDrink = true">
        <p>
@@ -229,29 +220,29 @@
   <div class="private-hire" #privateEvents>
     <mat-card>
       <mat-card-title>
+        <div class="mat-elevation-z1 separator pink"></div>
+
         PRIVATE HIRE AND EVENTS
       </mat-card-title>
       <mat-card-content>
-        <img src="../assets/meeting_room/P1000609.jpg"
-             style="width: 100%;"
-             alt="">
+
+<div class="content-container">
+  <!--<img src="../assets/meeting_room/P1000609.jpg"-->
+       <!--class="imgUnderlay"-->
+       <!--alt="">-->
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error libero molestias mollitia nihil quas reiciendis sint sit totam unde. Illum, quos, ratione? Dolores ea ex laudantium nesciunt quas sed.
 
 
-
-         <ul class="meeting-room-overlay">
-           <ul> Meeting Room available for 14 persons :-</ul>
-        <ul> * A perect venue for discreet meetings</ul>
-        <ul> * Pleasant and intimate space</ul>
-        <ul> * Complimentory Fine Coffees and Teas</ul>
-        <ul> * Configurable for breakout meeting, Private dining & formal meetings</ul>
-      </ul>
-
+  <ul class="meeting-room-overlay">
+    <li> Meeting Room available upto 14 persons :-</li>
+    <li> * Perfect for discreet meetings</li>
+    <li> * Pleasant and engaging</li>
+    <li> * Complimentory Fine Coffees and Teas</li>
+    <li> * Configurable for breakout meeting, Private dining & formal meetings</li>
+  </ul>
 
 
-        <!--<p>Small team meetings, brainstormings, high level discussions, board dinners and power lunches are top-->
-          <!--of-->
-          <!--this category for corporate events, while private do’s are much more varied ranging from birthday-->
-          <!--parties, celebrations, high end hen and stag dinners and family lunches.</p>-->
+</div>
 
       </mat-card-content>
     </mat-card>
