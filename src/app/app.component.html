@@ -2,59 +2,59 @@
 
 
 <div class="wp-toolbar mat-elevation-z10">
-  <div class="toolbar-firstrow" *ngIf="showFirstRow" [@collapseTrigger]>
-    <div class="contact-info" style="order:2;">
-      <div class="inner">
-        <span class="material-icons icons">home</span>
-        <span>14 Charterhouse Square,
+    <div class="toolbar-firstrow" *ngIf="showFirstRow" [@collapseTrigger]>
+        <div class="contact-info" style="order:2;">
+            <div class="inner">
+                <span class="material-icons icons">home</span>
+                <span>14 Charterhouse Square,
                  London</span> <br>
 
-        <span class="material-icons icons"
-              style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>
-        <span> 0203 817 4178</span><br>
-        <!--<div style="display: inline-block; width: 15px"></div>-->
+                <span class="material-icons icons"
+                      style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>
+                <span> 0203 817 4178</span><br>
+                <!--<div style="display: inline-block; width: 15px"></div>-->
 
-        <span class="material-icons icons" style="font-size: 18px; transform: translateY(3px);">email</span>
-        <span> 14.green.bookings@gmail.com</span>
-      </div>
+                <span class="material-icons icons" style="font-size: 18px; transform: translateY(3px);">email</span>
+                <span> 14.green.bookings@gmail.com</span>
+            </div>
+        </div>
+        <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
+            <img src="../assets/logo_small.png" alt="">
+
+        </div>
     </div>
-    <div class="logo" [ngStyle]="{'display': !flag ? 'flex' : 'flex'}">
-      <img src="../assets/logo_small.png" alt="">
+    <div class="toolbar-secondrow">
+        <button mat-button (click)="scrollToElement(menus)">MENUS</button>
+        <button mat-button (click)="showFirstRow = !showFirstRow">RESERVE</button>
+        <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
+        <button mat-button (click)="scrollToElement(afternoonTea)">AFTERNOON TEAS</button>
+        <button mat-button (click)="scrollToElement(findus)">FIND US</button>
 
     </div>
-  </div>
-  <div class="toolbar-secondrow">
-    <button mat-button (click)="scrollToElement(menus)">MENUS</button>
-    <button mat-button (click)="showFirstRow = !showFirstRow">RESERVE</button>
-    <button mat-button (click)="scrollToElement(privateEvents)">HIRE</button>
-    <button mat-button (click)="scrollToElement(afternoonTea)">AFTERNOON TEAS</button>
-    <button mat-button (click)="scrollToElement(findus)">FIND US</button>
-
-  </div>
 
 </div>
 
 
 <div class="vid-container" *ngIf="flag === true">
-  <button mat-icon-button
-          (click)="closeVidWindow()">
-    <span class="material-icons" style="font-size: 34px">close</span>
-  </button>
-  <div class="video_frame">
+    <button mat-icon-button
+            (click)="closeVidWindow()">
+        <span class="material-icons" style="font-size: 34px">close</span>
+    </button>
+    <div class="video_frame">
 
-    <video src="../assets/videos/have_a%20_little_drink.mp4"
-           controls
-           (load)="onLoad($event)"
-           #player>
-    </video>
+        <video src="../assets/videos/have_a%20_little_drink.mp4"
+               controls
+               (load)="onLoad($event)"
+               #player>
+        </video>
 
-    <!--<iframe width="80%" height="80%" src="https://www.youtube.com/embed/z3ItEdpX2TA?start=2" frameborder="0"-->
-    <!--#player-->
-    <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>-->
-    <!---->
-    <!--</iframe>-->
+        <!--<iframe width="80%" height="80%" src="https://www.youtube.com/embed/z3ItEdpX2TA?start=2" frameborder="0"-->
+        <!--#player-->
+        <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>-->
+        <!---->
+        <!--</iframe>-->
 
-  </div>
+    </div>
 </div>
 
 
@@ -62,233 +62,206 @@
 <div class="main_container">
 
 
-  <!-- BANNER-->
-  <div class="banner">
-    <img src="../assets/BannerSansStrapline.jpg" alt="">
-  </div>
-
-  <!---->
-  <!--OPENING TIMES-->
-
-  <div class="openingTimes">
-
-    <mat-card>
-      <mat-card-title>Mon - Fri</mat-card-title>
-      <mat-card-content>7:00am to 9:00pm</mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>Sat - Sun</mat-card-title>
-      <mat-card-content>Events & pre-bookings only
-        <br>
-        <p>General Opening from April</p>
-      </mat-card-content>
-    </mat-card>
-
-
-  </div>
-
-
-  <div #menus></div>
-  <div #afternoonTea></div>
-  <div class="menus">
-    <!---->
-    <!-- Afternoon Tea-->
-    <mat-card>
-      <mat-card-title>
-        <!--<div class="mat-elevation-z1 separator green"></div>-->
-        <div class="mat-elevation-z1 separator green"></div>
-        <div>Afternoon Tea</div>
-      </mat-card-title>
-      <mat-card-content>
-        <p>
-          The perfect setting for an Afternoon Tea with friends or colleagues. Our Garden room has charming views
-          overlooking the ancient trees and historic building of Charterhouse Square.
-        </p>
-        <p>
-          Our Tea menu with options to suit
-          both contemporary or traditional tastes.
-        </p>
-        <p></p>
-
-        <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button
-           style="color: whitesmoke; background-color: #827031;">
-          View Menu
-        </a>
-        <p></p>
-        <video src="../assets/videos/a_cafe_for_all_seasons.mp4"
-               width="100%"
-               controls
-               poster="../assets/food/sconesByCh.jpeg"
-               (load)="onLoad($event)"
-               #player>
-        </video>
-
-      </mat-card-content>
-    </mat-card>
+    <!-- BANNER-->
+    <div class="banner">
+        <img src="../assets/BannerSansStrapline.jpg" alt="">
+    </div>
 
     <!---->
-    <!--Lunch & Evening-->
-    <mat-card>
-      <mat-card-title>
-        <div class="mat-elevation-z1 separator green"></div>
-        <div>Lunch & Evening</div>
-      </mat-card-title>
-      <mat-card-content (deferLoad)="showFood=true">
-        <ng-container *ngIf="showFood">
-          <video src="../assets/videos/food_journey.mp4"
-                 width="100%"
-                 height="100%"
-                 poster="../assets/food/brunch_top.png"
-                 controls
-                 #foodjourney
-          ></video>
-        </ng-container>
-        <p>
-          Our menu reflects the seasons offerings but also the inclinations of our diners for each time of the year. We
-          pride
-          ourselves on presenting food that is vibrant in flavours and colours, our dishes to reflecting the latest of
-          trends with a nod also to favourite well known dishes.
-        </p>
-        <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button
-           style="color: whitesmoke; background-color: #827031;">
-          View Menu
-        </a>
-        <p></p>
+    <!--OPENING TIMES-->
 
-      </mat-card-content>
-    </mat-card>
+    <div class="openingTimes">
 
-    <!--BAR-->
+        <mat-card>
+            <mat-card-title>Mon - Fri</mat-card-title>
+            <mat-card-content>7:00am to 9:00pm</mat-card-content>
+        </mat-card>
 
-    <mat-card>
-      <mat-card-title>
-        <div class="mat-elevation-z1 separator pink"></div>
-        <div>Ales Wine & Cocktails</div>
-      </mat-card-title>
-      <mat-card-content (deferLoad)="showDrink = true">
-        <p>
-          Cocktails each Friday from 6pm with a 2-4-1 offer.
-        </p>
-        <p>
-          Your favourite Artisanal Lagers, Ciders and Pales on Tap.
-        </p>
-        <p>
+        <mat-card>
+            <mat-card-title>Sat - Sun</mat-card-title>
+            <mat-card-content>Events & pre-bookings only
+                <br>
+                <p>General Opening from April</p>
+            </mat-card-content>
+        </mat-card>
 
-        </p>
-        <ng-container *ngIf="showDrink">
-          <video src="../assets/videos/have_a%20_little_drink.mp4"
-                 width="100%"
-                 controls
-                 poster="../assets/IMG_0190.jpg"
-                 #drinkvid
-          ></video>
-        </ng-container>
-        <br><br><br>
-        <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf" target="_blank" mat-raised-button
-           style="color: whitesmoke; background-color: #827031;">
-          View Menu
-        </a>
-      </mat-card-content>
-    </mat-card>
+
+    </div>
+
+
+    <div #menus></div>
+    <div #afternoonTea></div>
+    <div class="menus">
+        <!---->
+        <!-- Afternoon Tea-->
+        <mat-card>
+            <mat-card-title>
+                <!--<div class="mat-elevation-z1 separator green"></div>-->
+                <div class="mat-elevation-z1 separator green"></div>
+                <div>Afternoon Tea</div>
+            </mat-card-title>
+            <mat-card-content>
+                <p>
+                    The perfect setting for an Afternoon Tea with friends or colleagues. Our Garden room has charming
+                    views
+                    overlooking the ancient trees and historic building of Charterhouse Square.
+                </p>
+                <p>
+                    Our Tea menu with options to suit
+                    both contemporary or traditional tastes.
+                </p>
+                <p></p>
+
+                <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button
+                   style="color: whitesmoke; background-color: #827031;">
+                    View Menu
+                </a>
+                <p></p>
+                <video src="../assets/videos/a_cafe_for_all_seasons.mp4"
+                       width="100%"
+                       controls
+                       poster="../assets/food/sconesByCh.jpeg"
+                       (load)="onLoad($event)"
+                       #player>
+                </video>
+
+            </mat-card-content>
+        </mat-card>
+
+        <!---->
+        <!--Lunch & Evening-->
+        <mat-card>
+            <mat-card-title>
+                <div class="mat-elevation-z1 separator green"></div>
+                <div>Lunch & Evening</div>
+            </mat-card-title>
+            <mat-card-content (deferLoad)="showFood=true">
+                <ng-container *ngIf="showFood">
+                    <video src="../assets/videos/food_journey.mp4"
+                           width="100%"
+                           height="100%"
+                           poster="../assets/food/brunch_top.png"
+                           controls
+                           #foodjourney
+                    ></video>
+                </ng-container>
+                <p>
+                    Reflecting both seasonal ingredients and diners seasonal tastes, we offer a menu that is vibrant in
+                    flavours and colours whether a traditional dishe or something more contemporary item.
+
+                </p>
+                <a href="../assets/menus/MainMenuSpring2019.v1.1.pdf" target="_blank" mat-raised-button
+                   style="color: whitesmoke; background-color: #827031;">
+                    View Menu
+                </a>
+                <p></p>
+
+            </mat-card-content>
+        </mat-card>
+
+        <!--BAR-->
+
+        <mat-card>
+            <mat-card-title>
+                <div class="mat-elevation-z1 separator pink"></div>
+                <div>Ales Wine & Cocktails</div>
+            </mat-card-title>
+            <mat-card-content (deferLoad)="showDrink = true">
+                <p>
+                    Cocktails each Friday from 6pm with a 2-4-1 offer.
+                </p>
+                <p>
+                    Your favourite Artisanal Lagers, Ciders and Pales on Tap.
+                </p>
+                <p>
+
+                </p>
+                <ng-container *ngIf="showDrink">
+                    <video src="../assets/videos/have_a%20_little_drink.mp4"
+                           width="100%"
+                           controls
+                           poster="../assets/IMG_0190.jpg"
+                           #drinkvid
+                    ></video>
+                </ng-container>
+                <br><br><br>
+                <a href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf" target="_blank" mat-raised-button
+                   style="color: whitesmoke; background-color: #827031;">
+                    View Menu
+                </a>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
 
     <!---->
-    <!--Super-Fine Coffees-->
+    <!-- CORPORATE EVENTS-->
 
-    <!--<mat-card>-->
-    <!--<div class="mat-elevation-z1 separator yellow"></div>-->
-    <!--<mat-card-title>-->
-    <!--<div>Super-Fine Coffees</div>-->
-    <!--<a style="padding: 20px" href="../assets/menus/WEEKEND%20BRUNCH%20COUPON%20REAR.pdf">-->
-    <!--<i class="material-icons"  matTooltip="Download Menu">-->
-    <!--cloud_download-->
-    <!--</i> </a>-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-content>-->
-    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis quidem sequi? Animi, commodi-->
-    <!--cumque ea nam nisi quasi totam! Accusamus autem id illum laborum molestiae natus nulla rerum tempora.-->
-    <!--<img src="../assets/ext_drinks/IMG_0280.jpg"-->
-    <!--style="width: 95%"-->
-    <!--alt="">-->
-    <!--</mat-card-content>-->
-    <!--</mat-card>-->
+    <div class="private-hire" #privateEvents>
+        <mat-card>
+            <mat-card-title>
+                <div class="mat-elevation-z1 separator pink"></div>
 
-  </div>
+                PRIVATE HIRE AND EVENTS
+            </mat-card-title>
+            <mat-card-content>
+                <div class="content-container">
+                    <div class="imgUnderlay">
 
-  <!---->
-  <!-- CORPORATE EVENTS-->
+                        <img src="../assets/meeting_room/P1000609.jpg">
 
-  <div class="private-hire" #privateEvents>
-    <mat-card>
-      <mat-card-title>
-        <div class="mat-elevation-z1 separator pink"></div>
+                    </div>
+                    <!--alt="">-->
+                    <div class="meeting-room-overlay">
+                        <ul>
+                            <li> Meeting Room available upto 14 persons :-</li>
+                            <li> * Perfect for discreet meetings</li>
+                            <li> * Pleasant and engaging</li>
+                            <li> * Complimentory Fine Coffees and Teas</li>
+                            <li> * Configurable for breakout meeting, Private dining & formal meetings</li>
+                        </ul>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
 
-        PRIVATE HIRE AND EVENTS
-      </mat-card-title>
-      <mat-card-content>
-
-        <div class="content-container">
-          <div class="imgUnderlay">
-
-            <img src="../assets/meeting_room/P1000609.jpg">
-
-          </div>
-          <!--alt="">-->
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea error libero molestias mollitia nihil quas
-          reiciendis sint sit totam unde. Illum, quos, ratione? Dolores ea ex laudantium nesciunt quas sed.
+    </div>
 
 
-          <ul class="meeting-room-overlay">
-            <li> Meeting Room available upto 14 persons :-</li>
-            <li> * Perfect for discreet meetings</li>
-            <li> * Pleasant and engaging</li>
-            <li> * Complimentory Fine Coffees and Teas</li>
-            <li> * Configurable for breakout meeting, Private dining & formal meetings</li>
-          </ul>
+    <mat-card class="find-us" #findus>
+        <span #findus></span>
+        <mat-card-title>GETTING HERE</mat-card-title>
+        <mat-card-content>
+            <p>
+                Located in Chartehouse Sq, immediately next door to the Charterhouse Museum.
+
+                <br>
+
+                <span class="material-icons" style="font-size: 20px;">home</span>
+                <span>14 CHARTERHOUSE SQ,</span>
+                <span>LONDON EC1M 6AX</span>
+                <br>
+                <br>
+                <!--<span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
+                <!--<span> 0203 817 4178</span>-->
+                <!--<br>-->
+                <!--<span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span>-->
+                <!--<span> 14.green.main@gmail.com</span>-->
 
 
-        </div>
+                <span style="line-height: 40px; letter-spacing: 2px">RAIL & UNDERGROUND</span>
+                <br>
+                <span class="material-icons" style="font-size: 20px;">train</span>
+                <span> Farrindon Station, Thameslink, Crossrail, </span>
+                <br>
+                <span class="material-icons" style="font-size: 20px;">subway</span>
+                <span> Farrindon Station, Thameslink, Crossrail, </span>
 
-      </mat-card-content>
+            </p>
+        </mat-card-content>
+        <mat-card-content>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
+                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </mat-card-content>
     </mat-card>
-
-  </div>
-
-
-  <mat-card class="find-us" #findus>
-    <span #findus></span>
-    <mat-card-title>GETTING HERE</mat-card-title>
-    <mat-card-content>
-      <p>
-        Located in Chartehouse Sq, immediately next door to the Charterhouse Museum.
-
-        <br>
-
-        <span class="material-icons" style="font-size: 20px;">home</span>
-        <span>14 CHARTERHOUSE SQ,</span>
-        <span>LONDON EC1M 6AX</span>
-        <br>
-        <br>
-        <!--<span class="material-icons" style="font-size: 20px; transform: translate(-3px,3px);">local_phone</span>-->
-        <!--<span> 0203 817 4178</span>-->
-        <!--<br>-->
-        <!--<span class="material-icons" style="font-size: 20px; transform: translateY(3px);">     email</span>-->
-        <!--<span> 14.green.main@gmail.com</span>-->
-
-
-        <span style="line-height: 40px; letter-spacing: 2px">RAIL & UNDERGROUND</span>
-        <br>
-        <span class="material-icons" style="font-size: 20px;">train</span>
-        <span> Farrindon Station, Thameslink, Crossrail, </span>
-        <br>
-        <span class="material-icons" style="font-size: 20px;">subway</span>
-        <span> Farrindon Station, Thameslink, Crossrail, </span>
-
-      </p>
-    </mat-card-content>
-    <mat-card-content>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5622285099244!2d-0.10153168422952075!3d51.5212469796374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b20950b258f%3A0x31f8c4c2ceff2a34!2sFourteen+on+the+Green!5e0!3m2!1sen!2suk!4v1539264187723"
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </mat-card-content>
-  </mat-card>

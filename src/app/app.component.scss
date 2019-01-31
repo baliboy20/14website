@@ -203,6 +203,7 @@ $shadow-blur: .08em;
   mat-card {
 
     margin-right: 10px;
+    margin-bottom: 15px;
 
     & mat-card-title {
       flex: 1 100%;
@@ -210,7 +211,7 @@ $shadow-blur: .08em;
 
       .separator {
         display: inline-block;
-        width: 65%;
+        width: 45%;
         height: 0px;
         //background-color: blue;
       }
@@ -267,7 +268,6 @@ $shadow-blur: .08em;
       @include title-color;
     }
     & mat-card-content {
-
       & .content-container {
         position: relative;
         //display: flex;
@@ -276,44 +276,53 @@ $shadow-blur: .08em;
         left: 0;
         bottom: 0;
         right: 0;
-
-        height: auto;
         $overlay-shadow: white;
-        //background-image: url(../assets/meeting_room/P1000609.jpg);
-//background-color:red;
-        height: auto;
-        width: auto;
+        //height: auto;
+        //width: auto;
 
-      & >  .imgUnderlay {
+        & > .imgUnderlay {
+          position: relative;
           //display: none;
-          width: auto;
+          //display: block;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
           height: auto;
 
-        & > image {
-
+          & > img {
+            width: 100%;
+            //height: auto;
+            object-fit: scale-down;
+          }
         }
-        }
 
-        .meeting-room-overlay {
-          display:  none;
-          //display: flex;
-          flex-flow: column nowrap;
+        & > .meeting-room-overlay {
+          display: block;
           position: absolute;
-          color: white;
+          //color: red;
           text-align: left;
           font-family: "Arial Unicode MS";
           background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-          padding: 10%;
-          font-size: 160%;
-          top: 10%;
-          width: auto;
           height: auto;
-          z-index: 1;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
 
-          & li {
-            flex: 0 1 22%;
-            display: flex;
-            text-decoration: dotted;
+          & > ul {
+            //color: red;
+            display: block;
+            top: 45%;
+            position: relative;
+            text-align: center;
+            & > li {
+              //flex: 0 1 22%;
+              //display: flex;
+              font-size: 160%;
+              color: white;
+              list-style: none;
+            }
           }
         }
       }
@@ -411,18 +420,9 @@ $shadow-blur: .08em;
       width: 100%;
     }
   }
-  //margin-top: 20px;
-  //display: inline-flex;
-  //border-radius: 8px;
-  //flex: 0 0 auto;
-  //flex-direction: row;
-
   & button {
-    //color: white;
-    //align-self: flex-end;
   }
 
-  //}
   .openingTimes {
     & mat-card {
       margin-bottom: 5px;
@@ -436,9 +436,18 @@ $shadow-blur: .08em;
     }
   }
 
-  .meeting-room-overlay {
+ .meeting-room-overlay {
     font-size: 0.8rem;
     padding-top: 10px;
+
+
+    & > ul {
+      top: 20% !important;
+      background-color: black !important;
+      li {
+      //color:green !important;
+      font-size: 110% !important;
+    } }
   }
 }
 
